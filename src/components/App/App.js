@@ -17,7 +17,7 @@ class App extends Component {
         console.log(elementName, groupName, groupElements[elementName]);
         const element = { group: groupName, name: elementName, ...groupElements[elementName] };
         element.urls.w3c = w3cLinks[elementName];
-        element.urls.hdn = mdnLinks[elementName];
+        element.urls.mdn = mdnLinks[elementName];
         element.urls.htmlDoctor = htmlDoctorLinks[elementName];
         all.push(element);
       })
@@ -30,7 +30,14 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          {all.map(element => <div>{element.name} {element.group}<br /> {JSON.stringify(element)}<br /></div>)}
+          {all.map(element => 
+            <div>
+              <h2>{element.name}</h2> 
+              <p>{element.group}</p>
+              <p>{element.description}</p>
+              <p>{element.urls.w3c} {element.urls.mdn} {element.urls.htmlDoctor}</p>
+            </div>
+          )}
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
