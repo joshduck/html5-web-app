@@ -1,0 +1,662 @@
+{
+  "root": {
+    "html": {
+      "description": "Document root element.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    }
+  },
+  "document": {
+    "head": {
+      "description": "First element of the HTML document. Contains document metadata.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "title": {
+      "description": "Document title.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "base": {
+      "description": "Specifies URL which non-absolute URLs are relative to.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "link": {
+      "description": "Other resources related to the document.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "meta": {
+      "description": "Document metadata that can\"t be represented with other elements.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "style": {
+      "description": "Styling defined inline data.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "script": {
+      "description": "Inline or linked client side scripts.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "noscript": {
+      "description": "Contains elements that are part of the document only if scripting is disabled.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    }
+  },
+  "sections": {
+    "body": {
+      "description": "Document content.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "section": {
+      "description": "Contains elements grouped by theme, for example a chapter or tab box.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "nav": {
+      "description": "Contains a collection of links.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "article": {
+      "description": "Section of the page content, such as a blog or forum post.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "aside": {
+      "description": "Content related to surrounding elements that doesn\"t belong inline, such as a advertising or quotes.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "h1": {
+      "description": "Heading for the current section.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "h2": {
+      "description": "Heading for the current section.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "h3": {
+      "description": "Heading for the current section.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "h4": {
+      "description": "Heading for the current section.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "h5": {
+      "description": "Heading for the current section.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "h6": {
+      "description": "Heading for the current section.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "main": {
+      "description": "The main content of the document.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "header": {
+      "description": "Navigation or introductory elements for the current section.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "footer": {
+      "description": "Footer of the current section.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "address": {
+      "description": "Contact information for the current article.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    }
+  },
+  "grouping": {
+    "p": {
+      "description": "Paragraph content.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "hr": {
+      "description": "Thematic break within a paragraph.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "br": {
+      "description": "Line break.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "pre": {
+      "description": "Text that is preformatted in the HTML code.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "blockquote": {
+      "description": "Quote from another source.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "ol": {
+      "description": "Ordered list.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "ul": {
+      "description": "Unordered list.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "li": {
+      "description": "List item.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "dl": {
+      "description": "List of term-description pairs.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "dt": {
+      "description": "Term which will be described.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "dd": {
+      "description": "Description for the preceding term.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "figure": {
+      "description": "Contains elements related to single concept, such as an illustration or code example.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "figcaption": {
+      "description": "Caption for a figure.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "div": {
+      "description": "Container with no semantic meaning.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    }
+  },
+  "text": {
+    "a": {
+      "description": "Hyperlink.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "em": {
+      "description": "Text that should be emphasised.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "strong": {
+      "description": "Text that is important.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "small": {
+      "description": "An aside, such as fine print.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "cite": {
+      "description": "Title of a referenced piece of work.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "s": {
+      "description": "Text that is outdated or no longer accurate.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "q": {
+      "description": "Quoted text.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "dfn": {
+      "description": "Term being defined by the parent section.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "abbr": {
+      "description": "Abbreviation or acronym.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "time": {
+      "description": "Time defined in a machine readable format.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "code": {
+      "description": "Fragment of code.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "var": {
+      "description": "Mathematical or programming variable.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "samp": {
+      "description": "Sample output of a program.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "kbd": {
+      "description": "Example input (usually keyboard) for a program.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "sub": {
+      "description": "Subscript text.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "sup": {
+      "description": "Superscript text.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "i": {
+      "description": "Text in a alternate voice or mood, such as a technical term.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "b": {
+      "description": "Stylistically separated text of equal importance, such as a product name.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "mark": {
+      "description": "Text highlighted for referencing elsewhere.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "ruby": {
+      "description": "Contains text with annotations, such as pronounciation hints. Commonly used in East Asian text.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "rt": {
+      "description": "Annotation of preceding text.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "rp": {
+      "description": "Contains semantically meaningless markup for browsers that don\"t understand ruby annotations.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "bdo": {
+      "description": "Defines directional formatting for content.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "bdi": {
+      "description": "Text that is separated from directional formatting of its surroundings.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "span": {
+      "description": "Container with no semantic meaning.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "ins": {
+      "description": "Text that has been inserted during document editing.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "del": {
+      "description": "Text that has been removed during document editing.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "wbr": {
+      "description": "Opportunity for a line break.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    }
+  },
+  "embedding": {
+    "img": {
+      "description": "An image.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "iframe": {
+      "description": "Nested browser frame.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "embed": {
+      "description": "Reference to non-HTML content.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "object": {
+      "description": "External resource such as an image, iframe or plugin.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "param": {
+      "description": "Parameters for the parent object.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "video": {
+      "description": "Video.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "audio": {
+      "description": "Audio file.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "source": {
+      "description": "Alternative sources for parent video or audio elements.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "canvas": {
+      "description": "Bitmap which is editable by client side scripts.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "map": {
+      "description": "Image map for adding hyperlinks to parts of an image.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "area": {
+      "description": "Hyperlink area in an image map.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "track": {
+      "description": "Specifies external timing track for media elements.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    }
+  },
+  "table": {
+    "table": {
+      "description": "Table of multi-dimensional data.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "caption": {
+      "description": "Title of a table.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "colgroup": {
+      "description": "Defines a group of columns in a table.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "col": {
+      "description": "Columns in a table.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "tbody": {
+      "description": "Contains rows that hold the table\"s data.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "thead": {
+      "description": "Contains rows with table headings.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "tfoot": {
+      "description": "Contains rows with summary of data.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "tr": {
+      "description": "A row of cells.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "td": {
+      "description": "Table cell.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "th": {
+      "description": "Table heading.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    }
+  },
+  "form": {
+    "form": {
+      "description": "Form.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "fieldset": {
+      "description": "Set of form controls grouped by theme.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "legend": {
+      "description": "Define a name for a fieldset.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "label": {
+      "description": "Caption for a form control.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "input": {
+      "description": "Generic form input.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "button": {
+      "description": "A button.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "select": {
+      "description": "Control for selecting from multiple options.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "datalist": {
+      "description": "Define sets of options.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "optgroup": {
+      "description": "Group of option.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "option": {
+      "description": "Single option within a select control.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "textarea": {
+      "description": "Multiline free-form text input.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "keygen": {
+      "description": "Generates private-public key pairs.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "output": {
+      "description": "Contains the results of a calculation.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "progress": {
+      "description": "Control for displaying progress of a task.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "meter": {
+      "description": "Control for entering a numeric value in a known range.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    }
+  },
+  "interactive": {
+    "details": {
+      "description": "Contains additional information, such as the contents of an accordian view.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "summary": {
+      "description": "Caption of a details element.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "command": {
+      "description": "Command the user can perform, such as publishing an article.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    },
+    "menu": {
+      "description": "Set of commands.",
+      "parent": null,
+      "urls": {},
+      "attributes": {}
+    }
+  }
+}
