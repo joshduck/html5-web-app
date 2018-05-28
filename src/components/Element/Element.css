@@ -1,0 +1,6 @@
+.Element {
+  display: block;
+  border: 1px solid #ccc;
+  max-width: 400px;
+  margin: 10px;
+}

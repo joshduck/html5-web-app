@@ -1,45 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-import elements from '../../data/elements';
-import w3cLinks from '../../data/w3c-links'
-import mdnLinks from '../../data/mdn-links'
-import htmlDoctorLinks from '../../data/htmldoctor-links'
+import Element from '../Element/Element';
+import { getAllElements } from '../../data';
 
 class App extends Component {
   render() {
-    const all = [];
-
-    Object.keys(elements).map(groupName => {
-      const groupElements = elements[groupName];
-      Object.keys(groupElements).map(elementName => {
-        console.log(elementName, groupName, groupElements[elementName]);
-        const element = { group: groupName, name: elementName, ...groupElements[elementName] };
-        element.urls.w3c = w3cLinks[elementName];
-        element.urls.mdn = mdnLinks[elementName];
-        element.urls.htmlDoctor = htmlDoctorLinks[elementName];
-        all.push(element);
-      })
-    });
+    const elements = getAllElements();
 
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo-still" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">HTML</h1>
         </header>
-        <p className="App-intro">
-          {all.map(element => 
-            <div>
-              <h2>{element.name}</h2> 
-              <p>{element.group}</p>
-              <p>{element.description}</p>
-              <p>{element.urls.w3c} {element.urls.mdn} {element.urls.htmlDoctor}</p>
-            </div>
-          )}
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="App-intro">
+          {elements.map(element => <Element element={element} />)}
+        </div>
       </div>
     );
   }
