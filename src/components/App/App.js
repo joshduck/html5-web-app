@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 
-import Element from '../Element/Element';
-import { getAllElements } from '../../data';
+import Element from "../Element/Element";
+import { getAllElements } from "../../data";
 
 class App extends Component {
   render() {
@@ -14,7 +14,9 @@ class App extends Component {
           <h1 className="App-title">HTML</h1>
         </header>
         <div className="App-intro">
-          {elements.map(element => <Element element={element} />)}
+          {elements.map(element => (
+            <Element element={element} key={element.name} />
+          ))}
         </div>
       </div>
     );

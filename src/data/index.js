@@ -6,12 +6,14 @@ import htmldoctor from './links/htmldoctor'
 import htmldog from './links/htmldog'
 import w3schools from './links/w3schools'
 
+
+console.log(Object.keys(elements));
 export const getAllElements = () => {
   const all = [];
 
-  Object.keys(elements).map(groupName => {
+  Object.keys(elements).forEach(groupName => {
     const groupElements = elements[groupName];
-    Object.keys(groupElements).map(elementName => {
+    Object.keys(groupElements).forEach(elementName => {
       const element = groupElements[elementName];
       const links = {
         w3c: w3c[elementName],
