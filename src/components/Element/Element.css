@@ -2,40 +2,42 @@
   display: block;
   width: 100px;
   height: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 5px;
-  float: left;
-  color: #222;
-  text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.5);
-  transform: scale(1);
-  transition: all ease-in-out 0.1s;
+  margin: 10px;
   position: relative;
+
+  transform: scale(1);
+  transition: all ease-in-out 0.15s;
+
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
   text-decoration: none;
   outline: none;
+  -webkit-tap-highlight-color: none;
 }
 
 .Element-name {
-  height: 100px;
+  margin: 0;
   line-height: 100px;
+
+  color: #222;
+  text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.5);
   letter-spacing: -0.05em;
   font-weight: normal;
-  margin: 0;
+  font-size: 1em;
 }
 
-.Element:hover {
+.Element-inactive:hover {
   transform: scale(1.1);
   z-index: 100;
 }
 
-.Element-active {
-  z-index: 100;
-}
-
-.Element:focus,
-.Element:active {
+.Element-selected {
   border-radius: 100px;
   transform: scale(2);
   z-index: 200;
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.Element-deselecting {
+  z-index: 150;
 }

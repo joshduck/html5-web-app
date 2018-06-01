@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 
-import Element from "../Element/Element";
+import Elements from "../Elements/Elements";
 import { getAllElements } from "../../data";
 
 class App extends Component {
@@ -11,13 +11,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">HTML</h1>
+          <h1 className="App-title">All The Tags</h1>
         </header>
-        <div className="App-intro">
-          {elements.map(element => (
-            <Element element={element} key={element.name} />
-          ))}
-        </div>
+        <Elements elements={elements} />
       </div>
     );
   }

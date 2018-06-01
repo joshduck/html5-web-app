@@ -1,5 +1,7 @@
 import React from "react";
+import cx from "classnames";
 import "./Element.css";
+import Transition from "react-transition-group/Transition";
 
 const colors = {
   root: 0,
@@ -15,41 +17,49 @@ const colors = {
 
 const colorFor = element => `hsl(${colors[element.group]}, 83%, 60%)`;
 
-const sizeFor = element => `${1.6 - element.name.length / 20}em`;
+const sizeFor = element => `${32 - element.name.length * 1.3}px`;
+
+const classesFor = state =>
+  cx({
+    Element: true,
+    "Element-selected": state === "entering" || state === "entered",
+    "Element-deselecting": state === "exiting",
+    "Element-inactive": state === "exited"
+  });
 
 class Element extends React.Component {
-  constructor() {
-    super();
-    this.state = { active: false };
+  shouldComponentUpdate(nextProps, nextState) {
+    return (
+      this.props.element !== nextProps.element ||
+      this.props.selected !== nextProps.selected
+    );
   }
 
-  onBlur(e) {
-    setTimeout(() => this.setState({ active: false }), 150);
-  }
-
-  onFocus() {
-    this.setState({ active: true });
+  onClick(e) {
+    this.props.onSelect();
+    e.preventDefault();
   }
 
   render() {
-    const { element } = this.props;
-    const color = colorFor(element);
-    const size = sizeFor(element);
+    const { element, selected } = this.props;
 
     return (
-      <a
-        href="#"
-        className={"Element " + (this.state.active ? "Element-active" : "")}
-        style={{ background: color }}
-        onClick={e => e.preventDefault()}
-        onFocus={e => this.onFocus(e)}
-        onBlur={e => this.onBlur(e)}
-      >
-        <h2 className="Element-name" style={{ fontSize: size }}>
-          {element.name}
-        </h2>
-        {/*<div className="Element-info">{element.group}</div>*/}
-      </a>
+      <Transition in={selected} timeout={500}>
+        {transition => (
+          <a
+            href={`#${element.name}`}
+            className={classesFor(transition)}
+            style={{
+              background: colorFor(element),
+              fontSize: sizeFor(element)
+            }}
+            onClick={e => this.onClick(e)}
+            onFocus={e => this.onClick(e)}
+          >
+            <h2 className="Element-name">{element.name}</h2>
+          </a>
+        )}
+      </Transition>
     );
   }
 }
