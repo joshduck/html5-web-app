@@ -44,7 +44,7 @@ class Element extends React.Component {
     const { element, selected } = this.props;
 
     return (
-      <Transition in={selected} timeout={500}>
+      <Transition in={selected} timeout={300}>
         {transition => (
           <a
             href={`#${element.name}`}

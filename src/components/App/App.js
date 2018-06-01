@@ -4,10 +4,10 @@ import "./App.css";
 import Elements from "../Elements/Elements";
 import { getAllElements } from "../../data";
 
+const elements = getAllElements();
+
 class App extends Component {
   render() {
-    const elements = getAllElements();
-
     return (
       <div className="App">
         <header className="App-header">
