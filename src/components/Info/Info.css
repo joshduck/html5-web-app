@@ -1,0 +1,53 @@
+.Info {
+  position: fixed;
+  z-index: 1000;
+
+  box-sizing: border-box;
+  bottom: -200px;
+  height: 200px;
+  left: 0;
+  right: 0;
+  padding: 16px;
+
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  transition: bottom ease-in-out 200ms;
+  background: #333;
+  color: white;
+}
+
+.Info-showing {
+  bottom: 0;
+}
+
+.Info h1 {
+  margin: 0 0 8px;
+}
+
+.Info-desc {
+  flex: 1;
+}
+
+.Info-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Info-links li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.Info-link {
+  text-decoration: none;
+  color: black;
+  padding: 8px;
+  background: #ccc;
+  display: inline-block;
+  margin-right: 8px;
+}

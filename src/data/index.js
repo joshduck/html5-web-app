@@ -8,7 +8,7 @@ import w3schools from "./links/w3schools";
 
 console.log(Object.keys(groupedElements));
 export const getAllElements = () => {
-  const all = [];
+  const all = {};
 
   Object.keys(groupedElements).forEach(groupName => {
     const groupElements = groupedElements[groupName];
@@ -22,12 +22,12 @@ export const getAllElements = () => {
         w3schools: w3schools[elementName]
       };
 
-      all.push({
+      all[elementName] = {
         group: groupName,
         name: elementName,
         description: element.description,
         links
-      });
+      };
     });
   });
 

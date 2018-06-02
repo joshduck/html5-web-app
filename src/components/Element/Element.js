@@ -47,6 +47,7 @@ class Element extends React.Component {
       <Transition in={selected} timeout={300}>
         {transition => (
           <a
+            id={`element-${element.name}`}
             href={`#${element.name}`}
             className={classesFor(transition)}
             style={{

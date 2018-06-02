@@ -1,5 +1,7 @@
-.Elements {
+.Elements-icons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
+  padding: 0 8px;
 }
