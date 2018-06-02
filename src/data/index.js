@@ -26,6 +26,7 @@ export const getAllElements = () => {
         group: groupName,
         name: elementName,
         description: element.description,
+        keywords: element.keywords,
         links
       };
     });

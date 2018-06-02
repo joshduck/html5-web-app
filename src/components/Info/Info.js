@@ -4,6 +4,15 @@ import cx from "classnames";
 
 import "./Info.css";
 
+const LinkItem = ({ url, children }) =>
+  url ? (
+    <li>
+      <a href={url} target="_blank" className="Info-link">
+        {children}
+      </a>
+    </li>
+  ) : null;
+
 class Info extends Component {
   render() {
     const { element } = this.props;
@@ -20,16 +29,11 @@ class Info extends Component {
             <h1>{element.name}</h1>
             <p className="Info-desc">{element.description}</p>
             <ul className="Info-links">
-              <li>
-                <a href="#a" className="Info-link">
-                  Test
-                </a>
-              </li>
-              <li>
-                <a href="#a" className="Info-link">
-                  Test
-                </a>
-              </li>
+              <LinkItem url={element.links.w3c}>W3C</LinkItem>
+              <LinkItem url={element.links.mdn}>
+                Mozilla Developer Network
+              </LinkItem>
+              <LinkItem url={element.links.w3schools}>w3schools</LinkItem>
             </ul>
           </Fragment>
         )}

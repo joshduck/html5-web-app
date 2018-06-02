@@ -2,13 +2,16 @@
   "root": {
     "html": {
       "description": "Document root element.",
+      "keywords": ["root"],
       "parent": null,
       "attributes": []
     }
   },
   "document": {
     "head": {
-      "description": "First element of the HTML document. Contains document metadata.",
+      "description":
+        "First element of the HTML document. Contains document metadata.",
+      "keywords": ["metadata"],
       "parent": null,
       "attributes": []
     },
@@ -19,6 +22,7 @@
     },
     "base": {
       "description": "Specifies URL which non-absolute URLs are relative to.",
+      "keywords": ["relative", "url"],
       "parent": null,
       "attributes": []
     },
@@ -28,22 +32,28 @@
       "attributes": []
     },
     "meta": {
-      "description": "Document metadata that can\"t be represented with other elements.",
+      "description":
+        "Document metadata that can't be represented with other elements.",
+      "keywords": ["metadata"],
       "parent": null,
       "attributes": []
     },
     "style": {
       "description": "Styling defined inline data.",
+      "keywords": ["css"],
       "parent": null,
       "attributes": []
     },
     "script": {
       "description": "Inline or linked client side scripts.",
+      "keywords": ["js", "javascript"],
       "parent": null,
       "attributes": []
     },
     "noscript": {
-      "description": "Contains elements that are part of the document only if scripting is disabled.",
+      "description":
+        "Contains elements that are part of the document only if scripting is disabled.",
+      "keywords": ["js", "javascript"],
       "parent": null,
       "attributes": []
     }
@@ -55,62 +65,78 @@
       "attributes": []
     },
     "section": {
-      "description": "Contains elements grouped by theme, for example a chapter or tab box.",
+      "description":
+        "Contains elements grouped by theme, for example a chapter or tab box.",
+      "keywords": ["chapter", "theme", "group"],
       "parent": null,
       "attributes": []
     },
     "nav": {
       "description": "Contains a collection of links.",
+      "keywords": ["menu", "links"],
       "parent": null,
       "attributes": []
     },
     "article": {
-      "description": "Section of the page content, such as a blog or forum post.",
+      "description":
+        "Section of the page content, such as a blog or forum post.",
+      "keywords": ["post", "blog", "content"],
       "parent": null,
       "attributes": []
     },
     "aside": {
-      "description": "Content related to surrounding elements that doesn\"t belong inline, such as a advertising or quotes.",
+      "description":
+        "Content related to surrounding elements that doesn't belong inline, such as a advertising or quotes.",
+      "keywords": ["quote"],
       "parent": null,
       "attributes": []
     },
     "h1": {
       "description": "Heading for the current section.",
+      "keywords": ["heading"],
       "parent": null,
       "attributes": []
     },
     "h2": {
       "description": "Heading for the current section.",
+      "keywords": ["heading"],
       "parent": null,
       "attributes": []
     },
     "h3": {
       "description": "Heading for the current section.",
+      "keywords": ["heading"],
       "parent": null,
       "attributes": []
     },
     "h4": {
       "description": "Heading for the current section.",
+      "keywords": ["heading"],
       "parent": null,
       "attributes": []
     },
     "h5": {
       "description": "Heading for the current section.",
+      "keywords": ["heading"],
       "parent": null,
       "attributes": []
     },
     "h6": {
       "description": "Heading for the current section.",
+      "keywords": ["heading"],
       "parent": null,
       "attributes": []
     },
     "main": {
       "description": "The main content of the document.",
+      "keywords": ["content"],
       "parent": null,
       "attributes": []
     },
     "header": {
-      "description": "Navigation or introductory elements for the current section.",
+      "description":
+        "Navigation or introductory elements for the current section.",
+      "keywords": ["introduction"],
       "parent": null,
       "attributes": []
     },
@@ -121,6 +147,7 @@
     },
     "address": {
       "description": "Contact information for the current article.",
+      "keywords": ["contact", "biography"],
       "parent": null,
       "attributes": []
     }
@@ -128,21 +155,25 @@
   "grouping": {
     "p": {
       "description": "Paragraph content.",
+      "keywords": ["paragraph"],
       "parent": null,
       "attributes": []
     },
     "hr": {
       "description": "Thematic break within a paragraph.",
+      "keywords": ["horizontal rule", "break"],
       "parent": null,
       "attributes": []
     },
     "br": {
       "description": "Line break.",
+      "keywords": ["break", "line", "new line"],
       "parent": null,
       "attributes": []
     },
     "pre": {
       "description": "Text that is preformatted in the HTML code.",
+      "keywords": ["preformatted", "monospace"],
       "parent": null,
       "attributes": []
     },
@@ -153,46 +184,56 @@
     },
     "ol": {
       "description": "Ordered list.",
+      "keywords": ["list", "ordered list"],
       "parent": null,
       "attributes": []
     },
     "ul": {
       "description": "Unordered list.",
+      "keywords": ["list", "unordered list"],
       "parent": null,
       "attributes": []
     },
     "li": {
       "description": "List item.",
+      "keywords": ["list"],
       "parent": null,
       "attributes": []
     },
     "dl": {
       "description": "List of term-description pairs.",
+      "keywords": ["list", "index", "definition", "description"],
       "parent": null,
       "attributes": []
     },
     "dt": {
       "description": "Term which will be described.",
+      "keywords": ["list", "index", "definition", "description"],
       "parent": null,
       "attributes": []
     },
     "dd": {
       "description": "Description for the preceding term.",
+      "keywords": ["list", "index", "definition", "description"],
       "parent": null,
       "attributes": []
     },
     "figure": {
-      "description": "Contains elements related to single concept, such as an illustration or code example.",
+      "description":
+        "Contains elements related to single concept, such as an illustration or code example.",
+      "keywords": ["image", "caption", "illustation"],
       "parent": null,
       "attributes": []
     },
     "figcaption": {
       "description": "Caption for a figure.",
+      "keywords": ["image", "caption", "illustation"],
       "parent": null,
       "attributes": []
     },
     "div": {
       "description": "Container with no semantic meaning.",
+      "keywords": ["block", "container"],
       "parent": null,
       "attributes": []
     }
@@ -200,46 +241,55 @@
   "text": {
     "a": {
       "description": "Hyperlink.",
+      "keywords": ["anchor", "link"],
       "parent": null,
       "attributes": []
     },
     "em": {
-      "description": "Text that should be emphasised.",
+      "description": "Text that should be emphasized.",
+      "keywords": ["italics", "emphasize", "emphasise"],
       "parent": null,
       "attributes": []
     },
     "strong": {
       "description": "Text that is important.",
+      "keywords": ["bold", "important", "highlight"],
       "parent": null,
       "attributes": []
     },
     "small": {
       "description": "An aside, such as fine print.",
+      "keywords": ["details", "fine print", "size"],
       "parent": null,
       "attributes": []
     },
     "cite": {
       "description": "Title of a referenced piece of work.",
+      "keywords": ["reference", "title"],
       "parent": null,
       "attributes": []
     },
     "s": {
       "description": "Text that is outdated or no longer accurate.",
+      "keywords": ["strikethrough", "strikeout", "correction"],
       "parent": null,
       "attributes": []
     },
     "q": {
-      "description": "Quoted text.",
+      "description": "Text that is quoted from another source.",
+      "keywords": ["quote", "quotation"],
       "parent": null,
       "attributes": []
     },
     "dfn": {
       "description": "Term being defined by the parent section.",
+      "keywords": ["definition"],
       "parent": null,
       "attributes": []
     },
     "abbr": {
       "description": "Abbreviation or acronym.",
+      "keywords": ["abbreviation", "acronym"],
       "parent": null,
       "attributes": []
     },
@@ -255,66 +305,84 @@
     },
     "var": {
       "description": "Mathematical or programming variable.",
+      "keywords": ["variable", "name"],
       "parent": null,
       "attributes": []
     },
     "samp": {
       "description": "Sample output of a program.",
+      "keywords": ["sample", "output"],
       "parent": null,
       "attributes": []
     },
     "kbd": {
       "description": "Example input (usually keyboard) for a program.",
+      "keywords": ["keyboard", "sample", "input"],
       "parent": null,
       "attributes": []
     },
     "sub": {
       "description": "Subscript text.",
+      "keywords": ["subscript", "below", "underneath"],
       "parent": null,
       "attributes": []
     },
     "sup": {
       "description": "Superscript text.",
+      "keywords": ["superscript", "above"],
       "parent": null,
       "attributes": []
     },
     "i": {
-      "description": "Text in a alternate voice or mood, such as a technical term.",
+      "description":
+        "Text in a alternate voice or mood, such as a technical term.",
+      "keywords": ["italics", "alternate", "voice", "mood"],
       "parent": null,
       "attributes": []
     },
     "b": {
-      "description": "Stylistically separated text of equal importance, such as a product name.",
+      "description":
+        "Stylistically separated text of equal importance, such as a product name.",
+      "keywords": ["bold", "important", "importancs", "mood"],
       "parent": null,
       "attributes": []
     },
     "mark": {
       "description": "Text highlighted for referencing elsewhere.",
+      "keywords": ["highlighted"],
       "parent": null,
       "attributes": []
     },
     "ruby": {
-      "description": "Contains text with annotations, such as pronounciation hints. Commonly used in East Asian text.",
+      "description":
+        "Contains text with annotations, such as pronounciation hints. Commonly used in East Asian text.",
+      "keywords": ["pronounciation", "annotation", "hint"],
       "parent": null,
       "attributes": []
     },
     "rt": {
       "description": "Annotation of preceding text.",
+      "keywords": ["ruby", "pronounciation", "annotation", "hint"],
       "parent": null,
       "attributes": []
     },
     "rp": {
-      "description": "Contains semantically meaningless markup for browsers that don\"t understand ruby annotations.",
+      "description":
+        "Contains semantically meaningless markup for browsers that don't understand ruby annotations.",
+      "keywords": ["ruby", "pronounciation", "annotation", "hint"],
       "parent": null,
       "attributes": []
     },
     "bdo": {
       "description": "Defines directional formatting for content.",
+      "keywords": ["direction", "rtl", "ltr"],
       "parent": null,
       "attributes": []
     },
     "bdi": {
-      "description": "Text that is separated from directional formatting of its surroundings.",
+      "description":
+        "Text that is separated from directional formatting of its surroundings.",
+      "keywords": ["direction", "rtl", "ltr"],
       "parent": null,
       "attributes": []
     },
@@ -325,16 +393,19 @@
     },
     "ins": {
       "description": "Text that has been inserted during document editing.",
+      "keywords": ["inserted"],
       "parent": null,
       "attributes": []
     },
     "del": {
       "description": "Text that has been removed during document editing.",
+      "keywords": ["deleted", "strikethrough"],
       "parent": null,
       "attributes": []
     },
     "wbr": {
       "description": "Opportunity for a line break.",
+      "keywords": ["word break", "line break", "wrap"],
       "parent": null,
       "attributes": []
     }
@@ -342,11 +413,13 @@
   "embedding": {
     "img": {
       "description": "An image.",
+      "keywords": ["image", "picture"],
       "parent": null,
       "attributes": []
     },
     "iframe": {
       "description": "Nested browser frame.",
+      "keywords": ["frame", "window"],
       "parent": null,
       "attributes": []
     },
@@ -367,36 +440,43 @@
     },
     "video": {
       "description": "Video.",
+      "keywords": ["movie", "film"],
       "parent": null,
       "attributes": []
     },
     "audio": {
       "description": "Audio file.",
+      "keywords": ["sound"],
       "parent": null,
       "attributes": []
     },
     "source": {
       "description": "Alternative sources for parent video or audio elements.",
+      "keywords": ["audio", "video"],
       "parent": null,
       "attributes": []
     },
     "canvas": {
       "description": "Bitmap which is editable by client side scripts.",
+      "keywords": ["image", "picture"],
       "parent": null,
       "attributes": []
     },
     "map": {
       "description": "Image map for adding hyperlinks to parts of an image.",
+      "keywords": ["image", "picture", "link", "map"],
       "parent": null,
       "attributes": []
     },
     "area": {
       "description": "Hyperlink area in an image map.",
+      "keywords": ["image", "picture", "link", "map"],
       "parent": null,
       "attributes": []
     },
     "track": {
       "description": "Specifies external timing track for media elements.",
+      "keywords": ["audio", "video"],
       "parent": null,
       "attributes": []
     }
@@ -409,46 +489,55 @@
     },
     "caption": {
       "description": "Title of a table.",
+      "keywords": ["table"],
       "parent": null,
       "attributes": []
     },
     "colgroup": {
       "description": "Defines a group of columns in a table.",
+      "keywords": ["table", "columns"],
       "parent": null,
       "attributes": []
     },
     "col": {
       "description": "Columns in a table.",
+      "keywords": ["table", "columns"],
       "parent": null,
       "attributes": []
     },
     "tbody": {
-      "description": "Contains rows that hold the table\"s data.",
+      "description": "Contains rows that hold the table's data.",
+      "keywords": ["table"],
       "parent": null,
       "attributes": []
     },
     "thead": {
       "description": "Contains rows with table headings.",
+      "keywords": ["table", "header", "headings"],
       "parent": null,
       "attributes": []
     },
     "tfoot": {
       "description": "Contains rows with summary of data.",
+      "keywords": ["table", "summary", "footer"],
       "parent": null,
       "attributes": []
     },
     "tr": {
       "description": "A row of cells.",
+      "keywords": ["table", "row", "cell"],
       "parent": null,
       "attributes": []
     },
     "td": {
       "description": "Table cell.",
+      "keywords": ["table", "row", "cell"],
       "parent": null,
       "attributes": []
     },
     "th": {
       "description": "Table heading.",
+      "keywords": ["table", "heading", "cell"],
       "parent": null,
       "attributes": []
     }
@@ -456,26 +545,31 @@
   "form": {
     "form": {
       "description": "Form.",
+      "keywords": ["input"],
       "parent": null,
       "attributes": []
     },
     "fieldset": {
       "description": "Set of form controls grouped by theme.",
+      "keywords": ["form", "control", "group"],
       "parent": null,
       "attributes": []
     },
     "legend": {
       "description": "Define a name for a fieldset.",
+      "keywords": ["form", "name", "group", "fieldset"],
       "parent": null,
       "attributes": []
     },
     "label": {
       "description": "Caption for a form control.",
+      "keywords": ["form", "caption", "name", "input"],
       "parent": null,
       "attributes": []
     },
     "input": {
       "description": "Generic form input.",
+      "keywords": ["form"],
       "parent": null,
       "attributes": []
     },
@@ -486,36 +580,44 @@
     },
     "select": {
       "description": "Control for selecting from multiple options.",
+      "keywords": ["options", "input", "dropdown"],
       "parent": null,
       "attributes": []
     },
     "datalist": {
       "description": "Define sets of options.",
+      "keywords": ["options", "input", "dropdown", "select"],
       "parent": null,
       "attributes": []
     },
     "optgroup": {
       "description": "Group of option.",
+      "keywords": ["options", "input", "dropdown", "select"],
       "parent": null,
       "attributes": []
     },
     "option": {
       "description": "Single option within a select control.",
+      "keywords": ["options", "input", "dropdown", "select"],
       "parent": null,
       "attributes": []
     },
     "textarea": {
       "description": "Multiline free-form text input.",
+
+      "keywords": ["input", "multiline"],
       "parent": null,
       "attributes": []
     },
     "keygen": {
       "description": "Generates private-public key pairs.",
+      "keywords": ["public", "private"],
       "parent": null,
       "attributes": []
     },
     "output": {
       "description": "Contains the results of a calculation.",
+      "keywords": ["calculation"],
       "parent": null,
       "attributes": []
     },
@@ -526,28 +628,33 @@
     },
     "meter": {
       "description": "Control for entering a numeric value in a known range.",
+      "keywords": ["numeric", "number", "range", "input"],
       "parent": null,
       "attributes": []
     }
   },
   "interactive": {
     "details": {
-      "description": "Contains additional information, such as the contents of an accordian view.",
+      "description":
+        "Contains additional information, such as the contents of an accordian view.",
       "parent": null,
       "attributes": []
     },
     "summary": {
       "description": "Caption of a details element.",
+      "keywords": ["details"],
       "parent": null,
       "attributes": []
     },
     "command": {
-      "description": "Command the user can perform, such as publishing an article.",
+      "description":
+        "Command the user can perform, such as publishing an article.",
       "parent": null,
       "attributes": []
     },
     "menu": {
       "description": "Set of commands.",
+      "keywords": ["commands"],
       "parent": null,
       "attributes": []
     }

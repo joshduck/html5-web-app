@@ -6,12 +6,22 @@ import Info from "../Info/Info";
 import scrollToElement from "./scrollToElement";
 import "./Elements.css";
 
-window.ste = scrollToElement;
-
+const matchFor = (element, query) => {
+  return (
+    element.name.indexOf(query) !== -1 ||
+    element.group.indexOf(query) !== -1 ||
+    (element.keywords &&
+      element.keywords.some(keyword => keyword.indexOf(query) !== -1))
+  );
+};
 class Elements extends Component {
   constructor() {
     super();
-    this.state = { selected: null };
+    this.state = { selected: null, query: null };
+  }
+
+  onSearch(query) {
+    this.setState({ query });
   }
 
   onSelect(name) {
@@ -21,13 +31,28 @@ class Elements extends Component {
   }
 
   render() {
-    const { elements } = this.props;
+    const { selected, query } = this.state;
+    const elements = this.props.elements;
+
+    let selectedElement = elements[selected];
+    let visibleElements = Object.values(elements);
+
+    if (query) {
+      visibleElements = visibleElements.filter(element =>
+        matchFor(element, query)
+      );
+    }
+
+    if (!visibleElements.includes(selectedElement)) {
+      selectedElement = null;
+    }
 
     return (
       <div className="Elements">
-        <Info element={elements[this.state.selected]} />
+        <input onChange={e => this.onSearch(e.target.value)} />
+        <Info element={selectedElement} />
         <div className="Elements-icons">
-          {Object.values(elements).map(element => (
+          {visibleElements.map(element => (
             <Element
               element={element}
               key={element.name}
