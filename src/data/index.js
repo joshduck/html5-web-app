@@ -6,7 +6,14 @@ import htmldoctor from "./links/htmldoctor";
 import htmldog from "./links/htmldog";
 import w3schools from "./links/w3schools";
 
-console.log(Object.keys(groupedElements));
+const getLink = (list, name) => {
+  if (list[name]) {
+    return list[name];
+  } else if (name.match(/h\d/)) {
+    return list["h*"];
+  }
+};
+
 export const getAllElements = () => {
   const all = {};
 
@@ -14,12 +21,13 @@ export const getAllElements = () => {
     const groupElements = groupedElements[groupName];
     Object.keys(groupElements).forEach(elementName => {
       const element = groupElements[elementName];
+
       const links = {
-        w3c: w3c[elementName],
-        mdn: mdn[elementName],
-        htmldoctor: htmldoctor[elementName],
-        htmldog: htmldog[elementName],
-        w3schools: w3schools[elementName]
+        w3c: getLink(w3c, elementName),
+        mdn: getLink(mdn, elementName),
+        htmldoctor: getLink(htmldoctor, elementName),
+        htmldog: getLink(htmldog, elementName),
+        w3schools: getLink(w3schools, elementName)
       };
 
       all[elementName] = {

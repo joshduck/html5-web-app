@@ -1,7 +1,26 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background: #eee;
   scroll-behavior: smooth;
+  font-family: sans-serif;
+  background-color: var(--grey-1);
+
+  --grey-1: #ebebeb;
+  --grey-2: #8d9dad;
+  --grey-3: #4e5d6c;
+  --grey-4: #2b3e50;
+  --blue-1: #5bc0de;
+  --blue-2: #31b0d5;
+  --orange-1: #df691a;
+  --orange-2: #b15315;
+
+  --input-border-color: var(--blue-1);
+  --input-placholder-color: var(--grey-2);
+
+  --button-fill-color: var(--blue-1);
+  --button-hover-color: var(--blue-2);
+  --button-text-color: white;
+
+  --panel-background-color: var(--grey-4);
+  --panel-text-color: white;
 }

@@ -5,4 +5,11 @@
 
 .App-title {
   font-size: 1.5em;
+  margin: 0 0 16px;
+}
+
+.App-header {
+  margin: 0 0 16px;
+  padding: 16px;
+  margin: 16px;
 }

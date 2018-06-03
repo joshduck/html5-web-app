@@ -1,17 +1,9 @@
 import React, { Fragment, Component } from "react";
-import Transition from "react-transition-group/Transition";
 import cx from "classnames";
 
-import "./Info.css";
+import InfoLink from "../InfoLink/InfoLink";
 
-const LinkItem = ({ url, children }) =>
-  url ? (
-    <li>
-      <a href={url} target="_blank" className="Info-link">
-        {children}
-      </a>
-    </li>
-  ) : null;
+import "./Info.css";
 
 class Info extends Component {
   render() {
@@ -29,11 +21,9 @@ class Info extends Component {
             <h1>{element.name}</h1>
             <p className="Info-desc">{element.description}</p>
             <ul className="Info-links">
-              <LinkItem url={element.links.w3c}>W3C</LinkItem>
-              <LinkItem url={element.links.mdn}>
-                Mozilla Developer Network
-              </LinkItem>
-              <LinkItem url={element.links.w3schools}>w3schools</LinkItem>
+              <InfoLink url={element.links.mdn}>MDN</InfoLink>
+              <InfoLink url={element.links.w3c}>W3C</InfoLink>
+              <InfoLink url={element.links.w3schools}>w3schools</InfoLink>
             </ul>
           </Fragment>
         )}

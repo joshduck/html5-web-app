@@ -1,0 +1,22 @@
+.InfoLink {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.InfoLink-button {
+  text-decoration: none;
+  background: var(--button-fill-color);
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px rbga(0, 0, 0, 0.2);
+  color: var(--button-text-color);
+  font-weight: bold;
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  padding: 8px 12px;
+}
+
+.InfoLink-button:hover,
+.InfoLink-button:active {
+  background: var(--button-hover-color);
+}

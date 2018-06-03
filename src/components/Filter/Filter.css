@@ -1,0 +1,22 @@
+.Filter-input {
+  padding: 8px;
+  width: 70%;
+  font-size: 1.2rem;
+  margin: 0 0 16px;
+  border: none;
+  border-bottom: 2px solid var(--input-border-color);
+  background: transparent;
+  transition: all ease-in 200ms;
+}
+
+.Filter-input:focus,
+.Filter-input:active {
+  outline: none;
+  background: white;
+}
+
+.Filter-input::placeholder {
+  font-style: italic;
+  font-weight: 200;
+  color: var(--input-placholder-color);
+}

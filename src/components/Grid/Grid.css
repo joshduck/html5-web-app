@@ -1,11 +1,7 @@
-.Elements-icons {
+.Grid {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
-  padding: 0 8px;
-}
-
-.Elements {
-  padding-bottom: 200px;
+  padding: 0 8px 232px;
 }
