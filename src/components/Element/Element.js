@@ -1,9 +1,12 @@
 import React from "react";
 import cx from "classnames";
-import "./Element.css";
 import Transition from "react-transition-group/Transition";
 
-const colors = {
+import effectiveTextLength from "./effectiveTextLength";
+
+import "./Element.css";
+
+const COLORS = {
   root: 0,
   document: 35,
   sections: 55,
@@ -15,9 +18,15 @@ const colors = {
   interactive: 320
 };
 
-const colorFor = element => `hsl(${colors[element.group]}, 90%, 60%)`;
+const BASE_SIZE = 32;
 
-const sizeFor = element => `${32 - element.name.length * 1.3}px`;
+const colorFor = element => `hsl(${COLORS[element.group]}, 90%, 60%)`;
+
+const sizeFor = element => {
+  const length = effectiveTextLength(element.name);
+  const normalized = Math.max(0, length - 4);
+  return `${BASE_SIZE - normalized * 2.5}px`;
+};
 
 const classesFor = state =>
   cx({
