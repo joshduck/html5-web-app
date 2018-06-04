@@ -5,6 +5,7 @@
   margin: 0 0 16px;
   border: none;
   border-bottom: 2px solid var(--input-border-color);
+  border-radius: 0;
   background: transparent;
   transition: all ease-in 200ms;
 }

@@ -15,7 +15,7 @@ const colors = {
   interactive: 320
 };
 
-const colorFor = element => `hsl(${colors[element.group]}, 83%, 60%)`;
+const colorFor = element => `hsl(${colors[element.group]}, 90%, 60%)`;
 
 const sizeFor = element => `${32 - element.name.length * 1.3}px`;
 
