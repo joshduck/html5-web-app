@@ -34,6 +34,7 @@ export const getAllElements = () => {
         group: groupName,
         name: elementName,
         description: element.description,
+        example: element.example,
         keywords: element.keywords,
         links
       };

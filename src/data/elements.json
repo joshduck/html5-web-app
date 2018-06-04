@@ -1,7 +1,8 @@
 {
   "root": {
     "html": {
-      "description": "Document root element.",
+      "description": "The top level (root) element of an HTML document.",
+      "example": "<html lang=\"en\">...</html>",
       "keywords": ["root"],
       "parent": null,
       "attributes": []
@@ -10,42 +11,50 @@
   "document": {
     "head": {
       "description":
-        "First element of the HTML document. Contains document metadata.",
+        "The head element of the HTML document contains document metadata, like titles and links to static resources.",
       "keywords": ["metadata"],
       "parent": null,
       "attributes": []
     },
     "title": {
-      "description": "Document title.",
+      "description": "Defines the document title.",
+      "example": "<title>All the tags</title>",
       "parent": null,
       "attributes": []
     },
     "base": {
       "description": "Specifies URL which non-absolute URLs are relative to.",
       "keywords": ["relative", "url"],
+      "example": "<base url=\"https://example.com/blog/\" />",
       "parent": null,
       "attributes": []
     },
     "link": {
-      "description": "Other resources related to the document.",
+      "description":
+        "Specifies other resources related to the current document, most commonly used to link to stylesheets.",
+      "example": "<link href=\"page.css\" rel=\"stylesheet\" />",
+      "keywords": ["resource", "css", "stylesheet"],
       "parent": null,
       "attributes": []
     },
     "meta": {
       "description":
-        "Document metadata that can't be represented with other elements.",
+        "Document metadata that can't be represented by other HTML metadata elements.",
+      "example": "<meta name=\"keywords\" content=\"HTML\" />",
       "keywords": ["metadata"],
       "parent": null,
       "attributes": []
     },
     "style": {
-      "description": "Styling defined inline data.",
+      "description": "CSS style information defined inline.",
+      "example": "<style>h1 { color: red; }</style>",
       "keywords": ["css"],
       "parent": null,
       "attributes": []
     },
     "script": {
       "description": "Inline or linked client side scripts.",
+      "example": "<script>alert('Hello.');</script>",
       "keywords": ["js", "javascript"],
       "parent": null,
       "attributes": []
@@ -53,6 +62,7 @@
     "noscript": {
       "description":
         "Contains elements that are part of the document only if scripting is disabled.",
+      "example": "<noscript><p>JS is off.</p></noscript>",
       "keywords": ["js", "javascript"],
       "parent": null,
       "attributes": []
@@ -60,26 +70,30 @@
   },
   "sections": {
     "body": {
-      "description": "Document content.",
+      "description": "The content of the document.",
+      "example": "<body><h1>Hello</h1></body>",
       "parent": null,
       "attributes": []
     },
     "section": {
       "description":
-        "Contains elements grouped by theme, for example a chapter or tab box.",
+        "A section containing elements grouped by theme, for example a chapter or tab box.",
+      "example": "<section><h1>Heading</h1>...</section>",
       "keywords": ["chapter", "theme", "group"],
       "parent": null,
       "attributes": []
     },
     "nav": {
-      "description": "Contains a collection of links.",
+      "description": "Contains a collection of navigation links.",
+      "example": "<nav><a href=\"/\">Home</a>...</nav>",
       "keywords": ["menu", "links"],
       "parent": null,
       "attributes": []
     },
     "article": {
       "description":
-        "Section of the page content, such as a blog or forum post.",
+        "A section of the page content, such as a blog or forum post, that is reusable in isolation.",
+      "example": "<article><h1>Blog Post</h1>...</article>",
       "keywords": ["post", "blog", "content"],
       "parent": null,
       "attributes": []

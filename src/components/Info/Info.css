@@ -4,7 +4,7 @@
 
   box-sizing: border-box;
   bottom: -200px;
-  min-height: 200px;
+  min-height: 128px;
   left: 0;
   right: 0;
   padding: 16px;
@@ -25,15 +25,38 @@
 }
 
 .Info h1 {
-  margin: 0 0 8px;
+  margin: 0 0 12px;
 }
 
 .Info-desc {
   flex: 1;
+  margin: 0 0 12px;
+}
+
+.Info-example {
+  font-family: Consolas, monospace;
+  margin: 0 0 12px;
+  letter-spacing: -0.5px;
+}
+
+.Info-example .token.punctuation {
+  color: var(--grey-1);
+}
+
+.Info-example .token.tag {
+  color: hsl(212, 100%, 70%);
+}
+
+.Info-example .token.attr-name {
+  color: hsl(108, 80%, 50%);
+}
+
+.Info-example .token.attr-value {
+  color: hsl(44, 80%, 50%);
 }
 
 .Info-links {
   list-style: none;
-  margin: 0;
+  margin: 4px 0 0;
   padding: 0;
 }

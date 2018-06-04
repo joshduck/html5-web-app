@@ -1,9 +1,35 @@
 import React, { Fragment, Component } from "react";
 import cx from "classnames";
-
+import Prism from "prismjs";
 import InfoLink from "../InfoLink/InfoLink";
 
 import "./Info.css";
+
+const InfoContent = ({ element }) => {
+  const example = Prism.highlight(
+    element.example || "",
+    Prism.languages.html,
+    "html"
+  );
+
+  return (
+    <Fragment>
+      <h1>{element.name}</h1>
+      <p className="Info-desc">{element.description}</p>
+      {element.example && (
+        <pre
+          className="Info-example"
+          dangerouslySetInnerHTML={{ __html: example }}
+        />
+      )}
+      <ul className="Info-links">
+        <InfoLink url={element.links.mdn}>MDN</InfoLink>
+        <InfoLink url={element.links.w3c}>W3C</InfoLink>
+        <InfoLink url={element.links.w3schools}>w3schools</InfoLink>
+      </ul>
+    </Fragment>
+  );
+};
 
 class Info extends Component {
   render() {
@@ -16,17 +42,7 @@ class Info extends Component {
           "Info-showing": !!element
         })}
       >
-        {element && (
-          <Fragment>
-            <h1>{element.name}</h1>
-            <p className="Info-desc">{element.description}</p>
-            <ul className="Info-links">
-              <InfoLink url={element.links.mdn}>MDN</InfoLink>
-              <InfoLink url={element.links.w3c}>W3C</InfoLink>
-              <InfoLink url={element.links.w3schools}>w3schools</InfoLink>
-            </ul>
-          </Fragment>
-        )}
+        {element && <InfoContent element={element} />}
       </div>
     );
   }
