@@ -41,5 +41,9 @@ export const getAllElements = () => {
     });
   });
 
+  const keys = Object.keys(all);
+  keys.sort();
+  console.log(keys.join("\n"));
+
   return all;
 };

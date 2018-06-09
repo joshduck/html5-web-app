@@ -66,6 +66,17 @@
       "keywords": ["js", "javascript"],
       "parent": null,
       "attributes": []
+    },
+    "template": {
+      "description": "",
+      "parent": null,
+      "attributes": []
+    },
+    "slot": {
+      "description": "",
+      "parent": null,
+      "attributes": [],
+      "status": "experimental"
     }
   },
   "sections": {
@@ -250,6 +261,11 @@
       "keywords": ["block", "container"],
       "parent": null,
       "attributes": []
+    },
+    "dialog": {
+      "description": "",
+      "parent": null,
+      "attributes": []
     }
   },
   "text": {
@@ -304,6 +320,11 @@
     "abbr": {
       "description": "Abbreviation or acronym.",
       "keywords": ["abbreviation", "acronym"],
+      "parent": null,
+      "attributes": []
+    },
+    "data": {
+      "description": "",
       "parent": null,
       "attributes": []
     },
@@ -374,6 +395,12 @@
       "parent": null,
       "attributes": []
     },
+    "rtc": {
+      "description": "",
+      "keywords": ["ruby", "pronounciation", "annotation", "hint"],
+      "parent": null,
+      "attributes": []
+    },
     "rt": {
       "description": "Annotation of preceding text.",
       "keywords": ["ruby", "pronounciation", "annotation", "hint"],
@@ -405,6 +432,11 @@
       "parent": null,
       "attributes": []
     },
+    "u": {
+      "description": "",
+      "parent": null,
+      "attributes": []
+    },
     "ins": {
       "description": "Text that has been inserted during document editing.",
       "keywords": ["inserted"],
@@ -427,6 +459,12 @@
   "embedding": {
     "img": {
       "description": "An image.",
+      "keywords": ["image", "picture"],
+      "parent": null,
+      "attributes": []
+    },
+    "picture": {
+      "description": "",
       "keywords": ["image", "picture"],
       "parent": null,
       "attributes": []
@@ -623,12 +661,6 @@
       "parent": null,
       "attributes": []
     },
-    "keygen": {
-      "description": "Generates private-public key pairs.",
-      "keywords": ["public", "private"],
-      "parent": null,
-      "attributes": []
-    },
     "output": {
       "description": "Contains the results of a calculation.",
       "keywords": ["calculation"],
@@ -657,18 +689,6 @@
     "summary": {
       "description": "Caption of a details element.",
       "keywords": ["details"],
-      "parent": null,
-      "attributes": []
-    },
-    "command": {
-      "description":
-        "Command the user can perform, such as publishing an article.",
-      "parent": null,
-      "attributes": []
-    },
-    "menu": {
-      "description": "Set of commands.",
-      "keywords": ["commands"],
       "parent": null,
       "attributes": []
     }
