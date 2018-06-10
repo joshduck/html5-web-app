@@ -39,7 +39,7 @@ const classesFor = state =>
 class Element extends React.Component {
   constructor() {
     super();
-    this.state = { selectTime: null };
+    this.state = { interactTime: null };
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -55,11 +55,11 @@ class Element extends React.Component {
     if (
       this.props.selected &&
       allowDeselect &&
-      Date.now() - this.state.selectTime > 500
+      Date.now() - this.state.interactTime > 500
     ) {
       this.props.onDeselect();
     } else {
-      this.setState({ selectTime: Date.now() });
+      this.setState({ interactTime: Date.now() });
       this.props.onSelect();
     }
   }

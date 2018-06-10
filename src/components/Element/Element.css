@@ -25,7 +25,7 @@
   font-size: 1em;
 }
 
-.Element-inactive:hover {
+.Element-inactive:hover:not(:active) {
   transform: scale(1.1);
   z-index: 100;
 }
@@ -38,5 +38,5 @@
 }
 
 .Element-deselecting {
-  z-index: 150;
+  z-index: 101;
 }
