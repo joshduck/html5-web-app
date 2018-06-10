@@ -11,7 +11,7 @@
   "document": {
     "head": {
       "description":
-        "The head element of the HTML document contains document metadata, like titles and links to static resources.",
+        "The head element of the HTML document contains document metadata, like a title and links to static resources.",
       "keywords": ["metadata"],
       "parent": null,
       "attributes": []
@@ -53,7 +53,7 @@
       "attributes": []
     },
     "script": {
-      "description": "Inline or linked client side scripts.",
+      "description": "Inline or linked client side JavaScript code.",
       "example": "<script>alert('Hello.');</script>",
       "keywords": ["js", "javascript"],
       "parent": null,
@@ -68,12 +68,19 @@
       "attributes": []
     },
     "template": {
-      "description": "",
+      "description":
+        "Contains client-side content that will be rendered from JavaScript.",
+      "example":
+        "<template id=\"message\">Hello <span class=\"name\" />.</template>",
+      "keywords": ["template", "javascript", "js"],
       "parent": null,
       "attributes": []
     },
     "slot": {
-      "description": "",
+      "description":
+        "Placeholder inside a web component that the consumer can fill with their own content. Not part of the W3C standard.",
+      "example": "<slot name=\"description\">Default message</slot>",
+      "keywords": ["web components", "components"],
       "parent": null,
       "attributes": [],
       "status": "experimental"
@@ -95,7 +102,7 @@
       "attributes": []
     },
     "nav": {
-      "description": "Contains a collection of navigation links.",
+      "description": "A section dedicated to navigation links.",
       "example": "<nav><a href=\"/\">Home</a>...</nav>",
       "keywords": ["menu", "links"],
       "parent": null,
@@ -111,49 +118,57 @@
     },
     "aside": {
       "description":
-        "Content related to surrounding elements that doesn't belong inline, such as a advertising or quotes.",
+        "Content that is only indirectly related to the main content, such as a sidebar.",
+      "example": "<aside><h1>Related content</h1></aside>",
       "keywords": ["quote"],
       "parent": null,
       "attributes": []
     },
     "h1": {
-      "description": "Heading for the current section.",
+      "description": "The highest level heading for the current section.",
+      "example": "<h1>History of HTML</h1>",
       "keywords": ["heading"],
       "parent": null,
       "attributes": []
     },
     "h2": {
-      "description": "Heading for the current section.",
+      "description": "A heading for the current section.",
+      "example": "<h2>Introduction</h2>",
       "keywords": ["heading"],
       "parent": null,
       "attributes": []
     },
     "h3": {
-      "description": "Heading for the current section.",
+      "description": "A heading for the current section.",
+      "example": "<h3>Introduction</h3>",
       "keywords": ["heading"],
       "parent": null,
       "attributes": []
     },
     "h4": {
-      "description": "Heading for the current section.",
+      "description": "A heading for the current section.",
+      "example": "<h4>Introduction</h4>",
       "keywords": ["heading"],
       "parent": null,
       "attributes": []
     },
     "h5": {
-      "description": "Heading for the current section.",
+      "description": "A heading for the current section.",
+      "example": "<h5>Introduction</h5>",
       "keywords": ["heading"],
       "parent": null,
       "attributes": []
     },
     "h6": {
-      "description": "Heading for the current section.",
+      "description": "The lowest level heading for the current section.",
+      "example": "<h6>Introduction</h6>",
       "keywords": ["heading"],
       "parent": null,
       "attributes": []
     },
     "main": {
       "description": "The main content of the document.",
+      "example": "<main><h1>About Us</h1>...</main>",
       "keywords": ["content"],
       "parent": null,
       "attributes": []
@@ -171,8 +186,10 @@
       "attributes": []
     },
     "address": {
-      "description": "Contact information for the current article.",
-      "keywords": ["contact", "biography"],
+      "description": "Contact information for a person or group of people.",
+      "example":
+        "<address>Email the authors at <a href=\"...\">...</a></address>",
+      "keywords": ["contact", "biography", "email", "phone", "mailing"],
       "parent": null,
       "attributes": []
     }
@@ -191,7 +208,8 @@
       "attributes": []
     },
     "br": {
-      "description": "Line break.",
+      "description":
+        "Line break within text. Used when line breaks are meaningful, like in a poem or postal address.",
       "keywords": ["break", "line", "new line"],
       "parent": null,
       "attributes": []
@@ -263,7 +281,8 @@
       "attributes": []
     },
     "dialog": {
-      "description": "",
+      "description":
+        "Represents a dialog or other window-like interactive component.",
       "parent": null,
       "attributes": []
     }
@@ -324,7 +343,7 @@
       "attributes": []
     },
     "data": {
-      "description": "",
+      "description": "Provides a machine-readable value for content.",
       "parent": null,
       "attributes": []
     },
@@ -395,12 +414,6 @@
       "parent": null,
       "attributes": []
     },
-    "rtc": {
-      "description": "",
-      "keywords": ["ruby", "pronounciation", "annotation", "hint"],
-      "parent": null,
-      "attributes": []
-    },
     "rt": {
       "description": "Annotation of preceding text.",
       "keywords": ["ruby", "pronounciation", "annotation", "hint"],
@@ -410,6 +423,13 @@
     "rp": {
       "description":
         "Contains semantically meaningless markup for browsers that don't understand ruby annotations.",
+      "keywords": ["ruby", "pronounciation", "annotation", "hint"],
+      "parent": null,
+      "attributes": []
+    },
+    "rtc": {
+      "description":
+        "Semantic annotation of the <rb> elements in a <ruby> element.",
       "keywords": ["ruby", "pronounciation", "annotation", "hint"],
       "parent": null,
       "attributes": []
@@ -433,7 +453,8 @@
       "attributes": []
     },
     "u": {
-      "description": "",
+      "description": "Indicates a span of text has a non-textual annotation.",
+      "example": "Hello <u class=\"error\">wrold</u>!",
       "parent": null,
       "attributes": []
     },
@@ -464,7 +485,8 @@
       "attributes": []
     },
     "picture": {
-      "description": "",
+      "description":
+        "An image that can adapt to different display scenarios, e.g. unique mobile and desktop versions of an image.",
       "keywords": ["image", "picture"],
       "parent": null,
       "attributes": []
@@ -656,7 +678,6 @@
     },
     "textarea": {
       "description": "Multiline free-form text input.",
-
       "keywords": ["input", "multiline"],
       "parent": null,
       "attributes": []
@@ -687,7 +708,7 @@
       "attributes": []
     },
     "summary": {
-      "description": "Caption of a details element.",
+      "description": "Provides a caption for a <details> element.",
       "keywords": ["details"],
       "parent": null,
       "attributes": []
