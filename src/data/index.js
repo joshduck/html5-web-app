@@ -30,9 +30,23 @@ export const getAllElements = () => {
         w3schools: getLink(w3schools, elementName)
       };
 
+      if (process.env.NODE_ENV === "development") {
+        if (!links.w3c) console.warn(`No W3C link for ${elementName}`);
+        if (!links.mdn) console.warn(`No MDN link for ${elementName}`);
+        if (!element.example)
+          console.warn(`No example for ${groupName}/${elementName}`);
+        if (element.example && element.example.length > 44)
+          console.warn(
+            `Example for ${groupName}/${elementName} is ${
+              element.example.length
+            } chars.`
+          );
+      }
+
       all[elementName] = {
         group: groupName,
         name: elementName,
+        status: element.status,
         description: element.description,
         example: element.example,
         keywords: element.keywords,
@@ -43,7 +57,6 @@ export const getAllElements = () => {
 
   const keys = Object.keys(all);
   keys.sort();
-  console.log(keys.join("\n"));
 
   return all;
 };

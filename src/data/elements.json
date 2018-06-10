@@ -70,8 +70,7 @@
     "template": {
       "description":
         "Contains client-side content that will be rendered from JavaScript.",
-      "example":
-        "<template id=\"message\">Hello <span class=\"name\" />.</template>",
+      "example": "<template id=\"message\"><p>Hello</p></template>",
       "keywords": ["template", "javascript", "js"],
       "parent": null,
       "attributes": []
@@ -79,7 +78,7 @@
     "slot": {
       "description":
         "Placeholder inside a web component that the consumer can fill with their own content. Not part of the W3C standard.",
-      "example": "<slot name=\"description\">Default message</slot>",
+      "example": "<slot name=\"description\">Default content</slot>",
       "keywords": ["web components", "components"],
       "parent": null,
       "attributes": [],
@@ -90,6 +89,13 @@
     "body": {
       "description": "The content of the document.",
       "example": "<body><h1>Hello</h1></body>",
+      "parent": null,
+      "attributes": []
+    },
+    "main": {
+      "description": "The main content of the document.",
+      "example": "<main><h1>About Us</h1>...</main>",
+      "keywords": ["content"],
       "parent": null,
       "attributes": []
     },
@@ -121,6 +127,20 @@
         "Content that is only indirectly related to the main content, such as a sidebar.",
       "example": "<aside><h1>Related content</h1></aside>",
       "keywords": ["quote"],
+      "parent": null,
+      "attributes": []
+    },
+    "header": {
+      "description":
+        "Navigation or introductory elements for the current section.",
+      "example": "<header><h1>About Us</h1>Published today</header>",
+      "keywords": ["introduction"],
+      "parent": null,
+      "attributes": []
+    },
+    "footer": {
+      "description": "Footer of the current section.",
+      "example": "<footer>Copyright 2018</footer>",
       "parent": null,
       "attributes": []
     },
@@ -166,25 +186,6 @@
       "parent": null,
       "attributes": []
     },
-    "main": {
-      "description": "The main content of the document.",
-      "example": "<main><h1>About Us</h1>...</main>",
-      "keywords": ["content"],
-      "parent": null,
-      "attributes": []
-    },
-    "header": {
-      "description":
-        "Navigation or introductory elements for the current section.",
-      "keywords": ["introduction"],
-      "parent": null,
-      "attributes": []
-    },
-    "footer": {
-      "description": "Footer of the current section.",
-      "parent": null,
-      "attributes": []
-    },
     "address": {
       "description": "Contact information for a person or group of people.",
       "example":
@@ -198,12 +199,14 @@
     "p": {
       "description": "Paragraph content.",
       "keywords": ["paragraph"],
+      "example": "<p>Call me Ishmael. Some years ago...</p>",
       "parent": null,
       "attributes": []
     },
     "hr": {
       "description": "Thematic break within a paragraph.",
       "keywords": ["horizontal rule", "break"],
+      "example": "<p>Content</p><hr /><p>Unrelated</p>",
       "parent": null,
       "attributes": []
     },
@@ -211,29 +214,35 @@
       "description":
         "Line break within text. Used when line breaks are meaningful, like in a poem or postal address.",
       "keywords": ["break", "line", "new line"],
+      "example": "<p>P. Sherman<br />Wallaby Way<br />Sydney</p>",
       "parent": null,
       "attributes": []
     },
     "pre": {
-      "description": "Text that is preformatted in the HTML code.",
+      "description":
+        "Text that is preformatted and should be presented as written in the HTML code.",
       "keywords": ["preformatted", "monospace"],
+      "example": "<pre># ls -al</pre>",
       "parent": null,
       "attributes": []
     },
     "blockquote": {
       "description": "Quote from another source.",
+      "example": "<blockquote>I have a dream...</blockquote>",
       "parent": null,
       "attributes": []
     },
     "ol": {
-      "description": "Ordered list.",
+      "description": "Ordered list of items.",
       "keywords": ["list", "ordered list"],
+      "example": "<ol><li>Item</li><li>Item</li></ol>",
       "parent": null,
       "attributes": []
     },
     "ul": {
-      "description": "Unordered list.",
+      "description": "Unordered list of items.",
       "keywords": ["list", "unordered list"],
+      "example": "<ul><li>Item</li><li>Item</li></ul>",
       "parent": null,
       "attributes": []
     },
