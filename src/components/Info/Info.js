@@ -14,7 +14,9 @@ const InfoContent = ({ element }) => {
 
   return (
     <Fragment>
-      <h1>{element.name}</h1>
+      <h1>
+        {element.name} {element.status && "(non-standard)"}
+      </h1>
       <p className="Info-desc">{element.description}</p>
       {element.example && (
         <pre

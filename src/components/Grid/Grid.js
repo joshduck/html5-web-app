@@ -16,6 +16,7 @@ class Grid extends Component {
             key={element.name}
             selected={element.name === selected}
             onSelect={() => this.props.onSelect(element.name)}
+            onDeselect={() => this.props.onSelect(null)}
           />
         ))}
       </div>

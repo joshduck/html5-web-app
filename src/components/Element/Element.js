@@ -37,6 +37,11 @@ const classesFor = state =>
   });
 
 class Element extends React.Component {
+  constructor() {
+    super();
+    this.state = { selectTime: null };
+  }
+
   shouldComponentUpdate(nextProps, nextState) {
     return (
       this.props.element !== nextProps.element ||
@@ -44,9 +49,19 @@ class Element extends React.Component {
     );
   }
 
-  onClick(e) {
-    this.props.onSelect();
-    e.preventDefault();
+  onClick(allowDeselect, event) {
+    event.preventDefault();
+
+    if (
+      this.props.selected &&
+      allowDeselect &&
+      Date.now() - this.state.selectTime > 500
+    ) {
+      this.props.onDeselect();
+    } else {
+      this.setState({ selectTime: Date.now() });
+      this.props.onSelect();
+    }
   }
 
   render() {
@@ -63,8 +78,8 @@ class Element extends React.Component {
               background: colorFor(element),
               fontSize: sizeFor(element)
             }}
-            onClick={e => this.onClick(e)}
-            onFocus={e => this.onClick(e)}
+            onClick={e => this.onClick(true, e)}
+            onFocus={e => this.onClick(false, e)}
           >
             <h2 className="Element-name">{element.name}</h2>
           </a>

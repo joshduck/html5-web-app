@@ -8,6 +8,10 @@ const scrollTo = y =>
 
 export default name => {
   const element = document.getElementById(`element-${name}`);
+  if (!element) {
+    return;
+  }
+
   const rect = element.getBoundingClientRect();
 
   const screenTop = window.pageYOffset;
