@@ -315,14 +315,14 @@
     "em": {
       "description": "Text that should be emphasized.",
       "keywords": ["italics", "emphasize", "emphasise"],
-      "example": "You <em>must</em> do it!",
+      "example": "<p>You <em>must</em> do it!</p>",
       "parent": null,
       "attributes": []
     },
     "strong": {
       "description": "Text that is important.",
       "keywords": ["bold", "important", "highlight"],
-      "example": "<strong>Warning:</strong> do not attempt!",
+      "example": "<p><strong>Warning:</strong> do not...</p>",
       "parent": null,
       "attributes": []
     },
@@ -335,14 +335,14 @@
     "cite": {
       "description": "Title of a referenced piece of work.",
       "keywords": ["reference", "title"],
-      "example": "Quoted text <cite>— Author Name</cite>",
+      "example": "<q>Quoted text</q> <cite>— Author Name</cite>",
       "parent": null,
       "attributes": []
     },
     "s": {
       "description": "Text that is outdated or no longer accurate.",
       "keywords": ["strikethrough", "strikeout", "correction"],
-      "example": "Price: <s>$10.00</s> $5.00",
+      "example": "<p>Price: <s>$10.00</s> $5.00</p>",
       "parent": null,
       "attributes": []
     },
@@ -362,57 +362,77 @@
     "abbr": {
       "description": "Abbreviation or acronym.",
       "keywords": ["abbreviation", "acronym"],
+      "example": "This is <abbr title=\"Hypertext...\">HTML</abbr>.",
       "parent": null,
       "attributes": []
     },
     "data": {
-      "description": "Provides a machine-readable value for content.",
+      "description":
+        "Provides a machine-readable and human-readable value for content; the <time> element should be used for date- or time- related data.",
+      "keywords": ["data", "microformat"],
+      "example": "<p>Color: <data value=\"#f00\">red</data>.</p>",
       "parent": null,
       "attributes": []
     },
     "time": {
       "description": "Time defined in a machine readable format.",
+      "keywords": ["data", "datetime", "date", "microformat"],
+      "example": "<time datetime=\"2017-01-01\">1y ago</time>.",
       "parent": null,
       "attributes": []
     },
     "code": {
-      "description": "Fragment of code.",
+      "description": "A short fragment of code.",
+      "keywords": ["code"],
+      "example": "<p>Call <code>Date.now()</code>.</p>",
       "parent": null,
       "attributes": []
     },
     "var": {
       "description": "Mathematical or programming variable.",
-      "keywords": ["variable", "name"],
+      "example": "<var>x</var> = <var>y</var> - 10",
+      "keywords": ["variable", "maths"],
       "parent": null,
       "attributes": []
     },
     "samp": {
       "description": "Sample output of a program.",
-      "keywords": ["sample", "output"],
+      "keywords": ["sample", "output", "code", "program"],
+      "example": "<samp>Scan complete</samp> will be printed.",
       "parent": null,
       "attributes": []
     },
     "kbd": {
       "description": "Example input (usually keyboard) for a program.",
-      "keywords": ["keyboard", "sample", "input"],
+      "keywords": ["keyboard", "sample", "input", "code", "program"],
+      "example": "Type <kbd>ls -al</kbd> to see the files.",
       "parent": null,
       "attributes": []
     },
     "sub": {
       "description": "Subscript text.",
-      "keywords": ["subscript", "below", "underneath"],
+      "keywords": ["subscript", "below", "underneath", "maths"],
+      "example": "The symbol for water is H<sub>2</sub>O.",
       "parent": null,
       "attributes": []
     },
     "sup": {
       "description": "Superscript text.",
-      "keywords": ["superscript", "above"],
+      "keywords": [
+        "superscript",
+        "above",
+        "maths",
+        "squared",
+        "exponential",
+        "exponent"
+      ],
+      "example": "10<sup>2</sup> is 100.",
       "parent": null,
       "attributes": []
     },
     "i": {
       "description":
-        "Text in a alternate voice or mood, such as a technical term.",
+        "Text in a alternate voice or mood, such as a technical term or a title.",
       "keywords": ["italics", "alternate", "voice", "mood"],
       "parent": null,
       "attributes": []
