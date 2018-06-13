@@ -405,14 +405,14 @@
     "kbd": {
       "description": "Example input (usually keyboard) for a program.",
       "keywords": ["keyboard", "sample", "input", "code", "program"],
-      "example": "Type <kbd>ls -al</kbd> to see the files.",
+      "example": "Type <kbd>ls -l</kbd> to list files.",
       "parent": null,
       "attributes": []
     },
     "sub": {
       "description": "Subscript text.",
       "keywords": ["subscript", "below", "underneath", "maths"],
-      "example": "The symbol for water is H<sub>2</sub>O.",
+      "example": "H<sub>2</sub>O is the symbol for water.",
       "parent": null,
       "attributes": []
     },
@@ -434,6 +434,7 @@
       "description":
         "Text in a alternate voice or mood, such as a technical term or a title.",
       "keywords": ["italics", "alternate", "voice", "mood"],
+      "example": "<p>The term <i>déjà vu</i> means...</p>",
       "parent": null,
       "attributes": []
     },
@@ -441,12 +442,14 @@
       "description":
         "Stylistically separated text of equal importance, such as a product name.",
       "keywords": ["bold", "important", "importancs", "mood"],
+      "example": "<p>Stack uses <b>HTML</b> and <b>CSS</b>.",
       "parent": null,
       "attributes": []
     },
     "mark": {
       "description": "Text highlighted for referencing elsewhere.",
       "keywords": ["highlighted"],
+      "example": "Text with <mark>noteworthy phrase</mark>.",
       "parent": null,
       "attributes": []
     },
@@ -454,32 +457,44 @@
       "description":
         "Contains text with annotations, such as pronounciation hints. Commonly used in East Asian text.",
       "keywords": ["pronounciation", "annotation", "hint"],
+      "example": "<ruby><rb>♥</rb><rt>Heart</rt></ruby>",
+      "parent": null,
+      "attributes": []
+    },
+    "rb": {
+      "description": "Contains the ruby base text for a ruby annotations.",
+      "keywords": ["ruby", "pronounciation", "annotation", "hint"],
+      "example": "<ruby><rb>♥</rb><rt>Heart</rt></ruby>",
       "parent": null,
       "attributes": []
     },
     "rt": {
-      "description": "Annotation of preceding text.",
+      "description":
+        "Contains the ruby text of a ruby annotation, for example a pronunciation guide.",
       "keywords": ["ruby", "pronounciation", "annotation", "hint"],
+      "example": "<ruby><rb>♥</rb><rt>Heart</rt></ruby>",
+      "parent": null,
+      "attributes": []
+    },
+    "rtc": {
+      "description": "A ruby text container.",
+      "keywords": ["ruby", "pronounciation", "annotation", "hint"],
+      "example": "<ruby>♥<rtc><rt>Heart</rt></rtc></ruby>",
       "parent": null,
       "attributes": []
     },
     "rp": {
       "description":
-        "Contains semantically meaningless markup for browsers that don't understand ruby annotations.",
+        "Semantically meaningless markup for browsers that don't understand ruby annotations.",
       "keywords": ["ruby", "pronounciation", "annotation", "hint"],
-      "parent": null,
-      "attributes": []
-    },
-    "rtc": {
-      "description":
-        "Semantic annotation of the <rb> elements in a <ruby> element.",
-      "keywords": ["ruby", "pronounciation", "annotation", "hint"],
+      "example": "<ruby>♥<rp>(</rp><rt>Heart</rt><rp>)</rp></ruby>",
       "parent": null,
       "attributes": []
     },
     "bdo": {
       "description": "Defines directional formatting for content.",
       "keywords": ["direction", "rtl", "ltr"],
+      "example": "<bdo dir=\"rtl\">Right to left</bdo>",
       "parent": null,
       "attributes": []
     },
@@ -487,35 +502,41 @@
       "description":
         "Text that is separated from directional formatting of its surroundings.",
       "keywords": ["direction", "rtl", "ltr"],
+      "example": "<p dir=\"ltr\">Include some <bdi>شوكولاتة</bdi></p>",
       "parent": null,
       "attributes": []
     },
     "span": {
       "description": "Container with no semantic meaning.",
+      "example": "<span class=\"name\">Text</span>",
       "parent": null,
       "attributes": []
     },
     "u": {
       "description": "Indicates a span of text has a non-textual annotation.",
-      "example": "Hello <u class=\"error\">wrold</u>!",
+      "keywords": ["underline", "annotation"],
+      "example": "Text with a <u class=\"error\">mistaek</u>.",
       "parent": null,
       "attributes": []
     },
     "ins": {
       "description": "Text that has been inserted during document editing.",
-      "keywords": ["inserted"],
+      "keywords": ["inserted", "editing", "edited"],
+      "example": "They <ins>should</ins> not do that.",
       "parent": null,
       "attributes": []
     },
     "del": {
       "description": "Text that has been removed during document editing.",
-      "keywords": ["deleted", "strikethrough"],
+      "keywords": ["deleted", "strikethrough", "editing", "edited"],
+      "example": "They <del>should</del> not do that.",
       "parent": null,
       "attributes": []
     },
     "wbr": {
       "description": "Opportunity for a line break.",
       "keywords": ["word break", "line break", "wrap"],
+      "example": "1800-<wbr />123<wbr />456",
       "parent": null,
       "attributes": []
     }
@@ -524,6 +545,7 @@
     "img": {
       "description": "An image.",
       "keywords": ["image", "picture"],
+      "example": "<img src=\"boat.png\" alt=\"Sailing boat\" />",
       "parent": null,
       "attributes": []
     },
@@ -531,69 +553,81 @@
       "description":
         "An image that can adapt to different display scenarios, e.g. unique mobile and desktop versions of an image.",
       "keywords": ["image", "picture"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "iframe": {
       "description": "Nested browser frame.",
       "keywords": ["frame", "window"],
+      "example": "<iframe src=\"https://...\"></iframe>",
       "parent": null,
       "attributes": []
     },
     "embed": {
       "description": "Reference to non-HTML content.",
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "object": {
       "description": "External resource such as an image, iframe or plugin.",
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "param": {
       "description": "Parameters for the parent object.",
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "video": {
       "description": "Video.",
-      "keywords": ["movie", "film"],
+      "keywords": ["movie", "film", "media", "player"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "audio": {
       "description": "Audio file.",
-      "keywords": ["sound"],
+      "keywords": ["sound", "player", "media"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "source": {
       "description": "Alternative sources for parent video or audio elements.",
       "keywords": ["audio", "video"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "canvas": {
       "description": "Bitmap which is editable by client side scripts.",
-      "keywords": ["image", "picture"],
+      "keywords": ["image", "picture", "bitmap"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "map": {
       "description": "Image map for adding hyperlinks to parts of an image.",
       "keywords": ["image", "picture", "link", "map"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "area": {
       "description": "Hyperlink area in an image map.",
       "keywords": ["image", "picture", "link", "map"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "track": {
       "description": "Specifies external timing track for media elements.",
       "keywords": ["audio", "video"],
+      "example": "",
       "parent": null,
       "attributes": []
     }
@@ -601,60 +635,70 @@
   "table": {
     "table": {
       "description": "Table of multi-dimensional data.",
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "caption": {
       "description": "Title of a table.",
       "keywords": ["table"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "colgroup": {
       "description": "Defines a group of columns in a table.",
       "keywords": ["table", "columns"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "col": {
       "description": "Columns in a table.",
       "keywords": ["table", "columns"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "tbody": {
       "description": "Contains rows that hold the table's data.",
       "keywords": ["table"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "thead": {
       "description": "Contains rows with table headings.",
       "keywords": ["table", "header", "headings"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "tfoot": {
       "description": "Contains rows with summary of data.",
       "keywords": ["table", "summary", "footer"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "tr": {
       "description": "A row of cells.",
       "keywords": ["table", "row", "cell"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "td": {
       "description": "Table cell.",
       "keywords": ["table", "row", "cell"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "th": {
       "description": "Table heading.",
       "keywords": ["table", "heading", "cell"],
+      "example": "",
       "parent": null,
       "attributes": []
     }
@@ -663,82 +707,96 @@
     "form": {
       "description": "Form.",
       "keywords": ["input"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "fieldset": {
       "description": "Set of form controls grouped by theme.",
       "keywords": ["form", "control", "group"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "legend": {
       "description": "Define a name for a fieldset.",
       "keywords": ["form", "name", "group", "fieldset"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "label": {
       "description": "Caption for a form control.",
       "keywords": ["form", "caption", "name", "input"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "input": {
       "description": "Generic form input.",
       "keywords": ["form"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "button": {
       "description": "A button.",
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "select": {
       "description": "Control for selecting from multiple options.",
       "keywords": ["options", "input", "dropdown"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "datalist": {
       "description": "Define sets of options.",
       "keywords": ["options", "input", "dropdown", "select"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "optgroup": {
       "description": "Group of option.",
       "keywords": ["options", "input", "dropdown", "select"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "option": {
       "description": "Single option within a select control.",
       "keywords": ["options", "input", "dropdown", "select"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "textarea": {
       "description": "Multiline free-form text input.",
       "keywords": ["input", "multiline"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "output": {
       "description": "Contains the results of a calculation.",
       "keywords": ["calculation"],
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "progress": {
       "description": "Control for displaying progress of a task.",
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "meter": {
       "description": "Control for entering a numeric value in a known range.",
       "keywords": ["numeric", "number", "range", "input"],
+      "example": "",
       "parent": null,
       "attributes": []
     }
@@ -747,12 +805,14 @@
     "details": {
       "description":
         "Contains additional information, such as the contents of an accordian view.",
+      "example": "",
       "parent": null,
       "attributes": []
     },
     "summary": {
       "description": "Provides a caption for a <details> element.",
       "keywords": ["details"],
+      "example": "",
       "parent": null,
       "attributes": []
     }
