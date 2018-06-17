@@ -25,5 +25,5 @@ deploy:
   local_dir: build
   default_text_charset: "utf-8"
   bucket: "allthetags.com"
-  region: "ap-southeast-2"
+  region: "us-east-1"
   local_dir: build
