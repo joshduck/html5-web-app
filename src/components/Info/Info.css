@@ -11,8 +11,10 @@
   min-height: 128px;
   left: 0;
   right: 0;
+  width: 100%;
   padding: 16px;
 
+  border: none;
   display: flex;
   text-align: left;
   flex-direction: column;

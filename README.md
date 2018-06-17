@@ -1,3 +1,3 @@
 # All The Tags
 
-Browse all the HTML5 attributes in a friendly and fun interface.
+Browse all the HTML5 attributes in a rainbow list.

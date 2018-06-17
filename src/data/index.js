@@ -35,7 +35,7 @@ export const getAllElements = () => {
         if (!links.mdn) console.warn(`No MDN link for ${elementName}`);
         if (!element.example)
           console.warn(`No example for ${groupName}/${elementName}`);
-        if (element.example && element.example.length > 44)
+        if (element.example && element.example.length > 46)
           console.warn(
             `Example for ${groupName}/${elementName} is ${
               element.example.length

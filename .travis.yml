@@ -1,7 +1,5 @@
 language: node_js
 
-sudo: required
-
 addons:
   chrome: stable
 
@@ -18,7 +16,6 @@ install:
 script:
   - yarn test
   - yarn build
-  - yarn build-snap
 
 deploy:
   provider: s3
@@ -27,6 +24,6 @@ deploy:
   skip_cleanup: true
   local_dir: build
   default_text_charset: "utf-8"
-  bucket: "joshduck.com"
+  bucket: "allthetags.com"
   region: "ap-southeast-2"
   local_dir: build
