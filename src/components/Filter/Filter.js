@@ -6,7 +6,7 @@ export default ({ onChange }) => {
     <input
       onChange={e => onChange(e.target.value)}
       className="Filter-input"
-      placeholder="Filter (e.g. iframe, grouping, js)"
+      placeholder="Filter (e.g. body, text, js)"
     />
   );
 };

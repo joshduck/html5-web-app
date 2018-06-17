@@ -1,13 +1,16 @@
 .Filter-input {
   padding: 8px;
-  width: 70%;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  margin: 0;
   font-size: 1.2rem;
-  margin: 0 0 16px;
   border: none;
   border-bottom: 2px solid var(--input-border-color);
   border-radius: 0;
   background: transparent;
   transition: all ease-in 200ms;
+  text-align: center;
 }
 
 .Filter-input:focus,

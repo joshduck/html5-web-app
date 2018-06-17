@@ -44,7 +44,9 @@ class Info extends Component {
           "Info-showing": !!element
         })}
       >
-        {element && <InfoContent element={element} />}
+        <dialog open={!!element} className="Info-panel">
+          {element && <InfoContent element={element} />}
+        </dialog>
       </div>
     );
   }

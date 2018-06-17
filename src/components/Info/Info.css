@@ -1,4 +1,8 @@
-.Info {
+.Info-showing {
+  height: 212px;
+}
+
+.Info-panel {
   position: fixed;
   z-index: 1000;
 
@@ -20,7 +24,7 @@
   box-shadow: 0 -4px rgba(0, 0, 0, 0.2);
 }
 
-.Info-showing {
+.Info-showing .Info-panel {
   bottom: 0;
 }
 
@@ -35,8 +39,8 @@
 
 .Info-example {
   font-family: Consolas, monospace;
-  margin: 0 0 12px;
-  letter-spacing: -0.5px;
+  padding: 0 0 12px;
+  letter-spacing: -0.7px;
 }
 
 .Info-example .token.punctuation {

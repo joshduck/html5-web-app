@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import "./App.css";
 
 import Grid from "../Grid/Grid";
@@ -47,15 +48,26 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">ALL THE TAGS</h1>
+          <h1 className="App-title">&lt;All The Tags&gt;</h1>
           <Filter onChange={query => this.onFilter(query)} />
         </header>
-        <Grid
-          elements={visibleElements}
-          selected={selected}
-          onSelect={name => this.onSelect(name)}
-        />
-        <Info element={selectedElement} />
+
+        <main className="App-content">
+          {!visibleElements.length && <div className="App-noMatch">No matches</div>}
+
+          <Grid
+            elements={visibleElements}
+            selected={selected}
+            onSelect={name => this.onSelect(name)}
+            className="App-grid"
+          />
+
+          <Info element={selectedElement} />
+        </main>
+
+        <footer className="App-footer">
+          <a href="https://joshduck.com/">Created by @joshduck</a>
+        </footer>
       </div>
     );
   }

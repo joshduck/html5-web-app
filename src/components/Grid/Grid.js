@@ -9,7 +9,7 @@ class Grid extends Component {
     const { elements, selected } = this.props;
 
     return (
-      <div className="Grid">
+      <section className="Grid">
         {elements.map(element => (
           <Element
             element={element}
@@ -19,7 +19,7 @@ class Grid extends Component {
             onDeselect={() => this.props.onSelect(null)}
           />
         ))}
-      </div>
+      </section>
     );
   }
 }

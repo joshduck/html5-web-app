@@ -3,16 +3,19 @@
     "html": {
       "description": "The top level (root) element of an HTML document.",
       "example": "<html lang=\"en\">...</html>",
-      "keywords": ["root"],
+      "keywords": [
+        "root"
+      ],
       "parent": null,
       "attributes": []
     }
   },
   "document": {
     "head": {
-      "description":
-        "The head element of the document contains document metadata, like a title and links to static resources.",
-      "keywords": ["metadata"],
+      "description": "The head element of the document contains document metadata, like a title and links to static resources.",
+      "keywords": [
+        "metadata"
+      ],
       "parent": null,
       "attributes": []
     },
@@ -24,62 +27,81 @@
     },
     "base": {
       "description": "Specifies a URL which non-absolute URLs are relative to.",
-      "keywords": ["relative", "url"],
+      "keywords": [
+        "relative",
+        "url"
+      ],
       "example": "<base url=\"https://example.com/blog/\" />",
       "parent": null,
       "attributes": []
     },
     "link": {
-      "description":
-        "Specifies other resources related to the current document, most commonly used to link to stylesheets.",
+      "description": "Specifies other resources related to the current document, most commonly used to link to stylesheets.",
       "example": "<link href=\"/blog.css\" rel=\"stylesheet\" />",
-      "keywords": ["resource", "css", "stylesheet"],
+      "keywords": [
+        "resource",
+        "css",
+        "stylesheet"
+      ],
       "parent": null,
       "attributes": []
     },
     "meta": {
-      "description":
-        "Document metadata that can't be represented by other HTML metadata elements.",
+      "description": "Document metadata that can't be represented by other HTML metadata elements.",
       "example": "<meta name=\"keywords\" content=\"Blog\" />",
-      "keywords": ["metadata"],
+      "keywords": [
+        "metadata"
+      ],
       "parent": null,
       "attributes": []
     },
     "style": {
       "description": "CSS style information defined inline.",
       "example": "<style>.title { color: red; }</style>",
-      "keywords": ["css"],
+      "keywords": [
+        "css"
+      ],
       "parent": null,
       "attributes": []
     },
     "script": {
       "description": "JavaScript code defined inline or via an external URL.",
       "example": "<script>alert('Welcome.');</script>",
-      "keywords": ["js", "javascript"],
+      "keywords": [
+        "js",
+        "javascript"
+      ],
       "parent": null,
       "attributes": []
     },
     "noscript": {
-      "description":
-        "Elements that are part of the document only if JavaScript is disabled.",
+      "description": "Elements that are part of the document only if JavaScript is disabled.",
       "example": "<noscript><p>No JS.</p></noscript>",
-      "keywords": ["js", "javascript"],
+      "keywords": [
+        "js",
+        "javascript"
+      ],
       "parent": null,
       "attributes": []
     },
     "template": {
-      "description":
-        "Contains client-side content that will be rendered via JavaScript.",
+      "description": "Contains client-side content that will be rendered via JavaScript.",
       "example": "<template id=\"msg\">Hi <b class=\"name\" />.</template>",
-      "keywords": ["template", "javascript", "js"],
+      "keywords": [
+        "template",
+        "javascript",
+        "js"
+      ],
       "parent": null,
       "attributes": []
     },
     "slot": {
-      "description":
-        "A placeholder inside a web component that the can be fill with content. Not part of the W3C standard.",
+      "description": "A placeholder inside a web component that the can be fill with content. Not part of the W3C standard.",
       "example": "<slot name=\"count\">0 comments</slot>",
-      "keywords": ["web components", "components"],
+      "keywords": [
+        "web components",
+        "components"
+      ],
       "parent": null,
       "attributes": [],
       "status": "experimental"
@@ -95,46 +117,60 @@
     "main": {
       "description": "The primary content of the document.",
       "example": "<main><h1>About Me</h1>...</main>",
-      "keywords": ["content", "primary"],
+      "keywords": [
+        "content",
+        "primary"
+      ],
       "parent": null,
       "attributes": []
     },
     "section": {
-      "description":
-        "A section containing elements grouped by theme, for example a chapter or tab box.",
+      "description": "A section containing elements grouped by theme, for example a chapter or tab box.",
       "example": "<section><h1>Chapter 1</h1>...</section>",
-      "keywords": ["chapter", "theme", "group"],
+      "keywords": [
+        "chapter",
+        "theme",
+        "group"
+      ],
       "parent": null,
       "attributes": []
     },
     "nav": {
       "description": "A section dedicated to navigation links.",
       "example": "<nav><a href=\"/\">Home</a>...</nav>",
-      "keywords": ["menu", "links"],
+      "keywords": [
+        "menu",
+        "links"
+      ],
       "parent": null,
       "attributes": []
     },
     "article": {
-      "description":
-        "A section of the page content, such as a blog or forum post, that is reusable in isolation.",
+      "description": "A section of the page content, such as a blog or forum post, that is reusable in isolation.",
       "example": "<article><h1>Blog Post</h1>...</article>",
-      "keywords": ["post", "blog", "content"],
+      "keywords": [
+        "post",
+        "blog",
+        "content"
+      ],
       "parent": null,
       "attributes": []
     },
     "aside": {
-      "description":
-        "Content that is only indirectly related to the main content, such as a sidebar.",
+      "description": "Content that is only indirectly related to the main content, such as a sidebar.",
       "example": "<aside><h1>Related Links</h1>...</aside>",
-      "keywords": ["quote"],
+      "keywords": [
+        "quote"
+      ],
       "parent": null,
       "attributes": []
     },
     "header": {
-      "description":
-        "Navigation or introductory elements for the current section.",
+      "description": "Navigation or introductory elements for the current section.",
       "example": "<header><h1>Title</h1>Posted 1m ago</header>",
-      "keywords": ["introduction"],
+      "keywords": [
+        "introduction"
+      ],
       "parent": null,
       "attributes": []
     },
@@ -147,49 +183,67 @@
     "h1": {
       "description": "The highest level heading for the current section.",
       "example": "<h1>My Blog</h1>",
-      "keywords": ["heading"],
+      "keywords": [
+        "heading"
+      ],
       "parent": null,
       "attributes": []
     },
     "h2": {
       "description": "A heading for the current section.",
       "example": "<h2>Heading</h2>",
-      "keywords": ["heading"],
+      "keywords": [
+        "heading"
+      ],
       "parent": null,
       "attributes": []
     },
     "h3": {
       "description": "A heading for the current section.",
       "example": "<h3>Heading</h3>",
-      "keywords": ["heading"],
+      "keywords": [
+        "heading"
+      ],
       "parent": null,
       "attributes": []
     },
     "h4": {
       "description": "A heading for the current section.",
       "example": "<h4>Heading</h4>",
-      "keywords": ["heading"],
+      "keywords": [
+        "heading"
+      ],
       "parent": null,
       "attributes": []
     },
     "h5": {
       "description": "A heading for the current section.",
       "example": "<h5>Heading</h5>",
-      "keywords": ["heading"],
+      "keywords": [
+        "heading"
+      ],
       "parent": null,
       "attributes": []
     },
     "h6": {
       "description": "The lowest level heading for the current section.",
       "example": "<h6>Heading</h6>",
-      "keywords": ["heading"],
+      "keywords": [
+        "heading"
+      ],
       "parent": null,
       "attributes": []
     },
     "address": {
       "description": "Contact information for a person or group of people.",
       "example": "<address>Email us at <a href=\"...\" /></address>",
-      "keywords": ["contact", "biography", "email", "phone", "mailing"],
+      "keywords": [
+        "contact",
+        "biography",
+        "email",
+        "phone",
+        "mailing"
+      ],
       "parent": null,
       "attributes": []
     }
@@ -197,30 +251,42 @@
   "grouping": {
     "p": {
       "description": "Paragraph content.",
-      "keywords": ["paragraph"],
+      "keywords": [
+        "paragraph"
+      ],
       "example": "<p>Once upon a time...</p>",
       "parent": null,
       "attributes": []
     },
     "hr": {
       "description": "Thematic break within a paragraph.",
-      "keywords": ["horizontal rule", "break"],
+      "keywords": [
+        "horizontal rule",
+        "break"
+      ],
       "example": "<p>Text</p><hr /><p>Text</p>",
       "parent": null,
       "attributes": []
     },
     "br": {
-      "description":
-        "Line break within text. Used when line breaks are meaningful, like in a poem or postal address.",
-      "keywords": ["break", "line", "new line"],
+      "description": "Line break within text. Used when line breaks are meaningful, like in a poem or postal address.",
+      "keywords": [
+        "break",
+        "line",
+        "new line"
+      ],
       "example": "<p>Name<br />Main Street<br />Cityville</p>",
       "parent": null,
       "attributes": []
     },
     "pre": {
-      "description":
-        "Text that is preformatted and should be presented as written in the HTML code.",
-      "keywords": ["preformatted", "monospace", "code", "align"],
+      "description": "Text that is preformatted and should be presented as written in the HTML code.",
+      "keywords": [
+        "preformatted",
+        "monospace",
+        "code",
+        "align"
+      ],
       "example": "<pre>some.code('    ');</pre>",
       "parent": null,
       "attributes": []
@@ -233,14 +299,20 @@
     },
     "ol": {
       "description": "An ordered list of items.",
-      "keywords": ["list", "ordered list"],
+      "keywords": [
+        "list",
+        "ordered list"
+      ],
       "example": "<ol><li>Item</li><li>Item</li></ol>",
       "parent": null,
       "attributes": []
     },
     "ul": {
       "description": "Unordered list of items.",
-      "keywords": ["list", "unordered list"],
+      "keywords": [
+        "list",
+        "unordered list"
+      ],
       "example": "<ul><li>Item</li><li>Item</li></ul>",
       "parent": null,
       "attributes": []
@@ -248,57 +320,88 @@
     "li": {
       "description": "A single sist item inside a list.",
       "example": "<li>Item</li>",
-      "keywords": ["list"],
+      "keywords": [
+        "list"
+      ],
       "parent": null,
       "attributes": []
     },
     "dl": {
       "description": "List of term-description pairs.",
-      "keywords": ["list", "index", "definition", "description"],
+      "keywords": [
+        "list",
+        "index",
+        "definition",
+        "description"
+      ],
       "example": "<dl><dt>Term</dt><dd>Definition...</dd></dl>",
       "parent": null,
       "attributes": []
     },
     "dt": {
       "description": "Term which will be described.",
-      "keywords": ["list", "index", "definition", "description"],
+      "keywords": [
+        "list",
+        "index",
+        "definition",
+        "description"
+      ],
       "example": "<dl><dt>Term</dt><dd>Definition...</dd></dl>",
       "parent": null,
       "attributes": []
     },
     "dd": {
       "description": "Description for the preceding term.",
-      "keywords": ["list", "index", "definition", "description"],
+      "keywords": [
+        "list",
+        "index",
+        "definition",
+        "description"
+      ],
       "example": "<dl><dt>Term</dt><dd>Definition...</dd></dl>",
       "parent": null,
       "attributes": []
     },
     "figure": {
-      "description":
-        "Contains elements related to single concept, such as an illustration or code example.",
-      "keywords": ["image", "caption", "illustation"],
+      "description": "Contains elements related to single concept, such as an illustration or code example.",
+      "keywords": [
+        "image",
+        "caption",
+        "illustation"
+      ],
       "example": "<figure><img /><figcaption /></figure>",
       "parent": null,
       "attributes": []
     },
     "figcaption": {
       "description": "Caption for a figure.",
-      "keywords": ["figure", "image", "caption", "illustation"],
+      "keywords": [
+        "figure",
+        "image",
+        "caption",
+        "illustation"
+      ],
       "example": "<figcaption>Caption for image.</figcaption>",
       "parent": null,
       "attributes": []
     },
     "div": {
       "description": "Container with no semantic meaning.",
-      "keywords": ["block", "container"],
+      "keywords": [
+        "block",
+        "container"
+      ],
       "example": "<div>...</div>",
       "parent": null,
       "attributes": []
     },
     "dialog": {
-      "description":
-        "Represents a dialog or other window-like interactive component.",
-      "keywords": ["window", "popup", "overlay"],
+      "description": "Represents a dialog or other window-like interactive component.",
+      "keywords": [
+        "window",
+        "popup",
+        "overlay"
+      ],
       "parent": null,
       "example": "<dialog><p>Please subscribe.</p></dialog>",
       "attributes": []
@@ -307,83 +410,122 @@
   "text": {
     "a": {
       "description": "Hyperlink.",
-      "keywords": ["anchor", "link"],
+      "keywords": [
+        "anchor",
+        "link"
+      ],
       "example": "<a href=\"/home\">Home</a>",
       "parent": null,
       "attributes": []
     },
     "em": {
       "description": "Text that should be emphasized.",
-      "keywords": ["italics", "emphasize", "emphasise"],
+      "keywords": [
+        "italics",
+        "emphasize",
+        "emphasise"
+      ],
       "example": "<p>You <em>must</em> do it!</p>",
       "parent": null,
       "attributes": []
     },
     "strong": {
       "description": "Text that is important.",
-      "keywords": ["bold", "important", "highlight"],
+      "keywords": [
+        "bold",
+        "important",
+        "highlight"
+      ],
       "example": "<p><strong>Warning:</strong> do not...</p>",
       "parent": null,
       "attributes": []
     },
     "small": {
       "description": "An aside, such as fine print.",
-      "keywords": ["details", "fine print", "size"],
+      "keywords": [
+        "details",
+        "fine print",
+        "size"
+      ],
       "example": "<small>Copright, 2018</small>",
       "attributes": []
     },
     "cite": {
       "description": "Title of a referenced piece of work.",
-      "keywords": ["reference", "title"],
+      "keywords": [
+        "reference",
+        "title"
+      ],
       "example": "<q>Quoted text</q> <cite>— Author Name</cite>",
       "parent": null,
       "attributes": []
     },
     "s": {
       "description": "Text that is outdated or no longer accurate.",
-      "keywords": ["strikethrough", "strikeout", "correction"],
+      "keywords": [
+        "strikethrough",
+        "strikeout",
+        "correction"
+      ],
       "example": "<p>Price: <s>$10.00</s> $5.00</p>",
       "parent": null,
       "attributes": []
     },
     "q": {
       "description": "A short inline quotation.",
-      "keywords": ["quote", "quotation"],
+      "keywords": [
+        "quote",
+        "quotation"
+      ],
       "example": "She said <q cite=\"https://...\">quotation.</q>",
       "parent": null,
       "attributes": []
     },
     "dfn": {
       "description": "Term being defined by the parent section.",
-      "keywords": ["definition"],
+      "keywords": [
+        "definition"
+      ],
       "parent": null,
       "attributes": []
     },
     "abbr": {
       "description": "Abbreviation or acronym.",
-      "keywords": ["abbreviation", "acronym"],
+      "keywords": [
+        "abbreviation",
+        "acronym"
+      ],
       "example": "This is <abbr title=\"Hypertext...\">HTML</abbr>.",
       "parent": null,
       "attributes": []
     },
     "data": {
-      "description":
-        "Provides a machine-readable and human-readable value for content; the <time> element should be used for date- or time- related data.",
-      "keywords": ["data", "microformat"],
+      "description": "Provides a machine-readable and human-readable value for content; the <time> element should be used for date- or time- related data.",
+      "keywords": [
+        "data",
+        "microformat"
+      ],
       "example": "<p>Color: <data value=\"#f00\">red</data>.</p>",
       "parent": null,
       "attributes": []
     },
     "time": {
       "description": "Time defined in a machine readable format.",
-      "keywords": ["data", "datetime", "date", "microformat"],
+      "keywords": [
+        "data",
+        "datetime",
+        "date",
+        "microformat"
+      ],
       "example": "<time datetime=\"2017-01-01\">1y ago</time>.",
       "parent": null,
       "attributes": []
     },
     "code": {
       "description": "A short fragment of code.",
-      "keywords": ["code"],
+      "keywords": [
+        "code"
+      ],
       "example": "<p>Call <code>Date.now()</code>.</p>",
       "parent": null,
       "attributes": []
@@ -391,27 +533,46 @@
     "var": {
       "description": "Mathematical or programming variable.",
       "example": "<var>x</var> = <var>y</var> - 10",
-      "keywords": ["variable", "maths"],
+      "keywords": [
+        "variable",
+        "maths"
+      ],
       "parent": null,
       "attributes": []
     },
     "samp": {
       "description": "Sample output of a program.",
-      "keywords": ["sample", "output", "code", "program"],
+      "keywords": [
+        "sample",
+        "output",
+        "code",
+        "program"
+      ],
       "example": "<samp>Scan complete</samp> will be printed.",
       "parent": null,
       "attributes": []
     },
     "kbd": {
       "description": "Example input (usually keyboard) for a program.",
-      "keywords": ["keyboard", "sample", "input", "code", "program"],
+      "keywords": [
+        "keyboard",
+        "sample",
+        "input",
+        "code",
+        "program"
+      ],
       "example": "Type <kbd>ls -l</kbd> to list files.",
       "parent": null,
       "attributes": []
     },
     "sub": {
       "description": "Subscript text.",
-      "keywords": ["subscript", "below", "underneath", "maths"],
+      "keywords": [
+        "subscript",
+        "below",
+        "underneath",
+        "maths"
+      ],
       "example": "H<sub>2</sub>O is the symbol for water.",
       "parent": null,
       "attributes": []
@@ -431,77 +592,115 @@
       "attributes": []
     },
     "i": {
-      "description":
-        "Text in a alternate voice or mood, such as a technical term or a title.",
-      "keywords": ["italics", "alternate", "voice", "mood"],
+      "description": "Text in a alternate voice or mood, such as a technical term or a title.",
+      "keywords": [
+        "italics",
+        "alternate",
+        "voice",
+        "mood"
+      ],
       "example": "<p>The term <i>déjà vu</i> means...</p>",
       "parent": null,
       "attributes": []
     },
     "b": {
-      "description":
-        "Stylistically separated text of equal importance, such as a product name.",
-      "keywords": ["bold", "important", "importancs", "mood"],
+      "description": "Stylistically separated text of equal importance, such as a product name.",
+      "keywords": [
+        "bold",
+        "important",
+        "importancs",
+        "mood"
+      ],
       "example": "<p>Stack uses <b>HTML</b> and <b>CSS</b>.",
       "parent": null,
       "attributes": []
     },
     "mark": {
       "description": "Text highlighted for referencing elsewhere.",
-      "keywords": ["highlighted"],
+      "keywords": [
+        "highlighted"
+      ],
       "example": "Text with <mark>noteworthy phrase</mark>.",
       "parent": null,
       "attributes": []
     },
     "ruby": {
-      "description":
-        "Contains text with annotations, such as pronounciation hints. Commonly used in East Asian text.",
-      "keywords": ["pronounciation", "annotation", "hint"],
+      "description": "Contains text with annotations, such as pronounciation hints. Commonly used in East Asian text.",
+      "keywords": [
+        "pronounciation",
+        "annotation",
+        "hint"
+      ],
       "example": "<ruby><rb>♥</rb><rt>Heart</rt></ruby>",
       "parent": null,
       "attributes": []
     },
     "rb": {
       "description": "Contains the ruby base text for a ruby annotations.",
-      "keywords": ["ruby", "pronounciation", "annotation", "hint"],
+      "keywords": [
+        "ruby",
+        "pronounciation",
+        "annotation",
+        "hint"
+      ],
       "example": "<ruby><rb>♥</rb><rt>Heart</rt></ruby>",
       "parent": null,
       "attributes": []
     },
     "rt": {
-      "description":
-        "Contains the ruby text of a ruby annotation, for example a pronunciation guide.",
-      "keywords": ["ruby", "pronounciation", "annotation", "hint"],
+      "description": "Contains the ruby text of a ruby annotation, for example a pronunciation guide.",
+      "keywords": [
+        "ruby",
+        "pronounciation",
+        "annotation",
+        "hint"
+      ],
       "example": "<ruby><rb>♥</rb><rt>Heart</rt></ruby>",
       "parent": null,
       "attributes": []
     },
     "rtc": {
       "description": "A ruby text container.",
-      "keywords": ["ruby", "pronounciation", "annotation", "hint"],
+      "keywords": [
+        "ruby",
+        "pronounciation",
+        "annotation",
+        "hint"
+      ],
       "example": "<ruby>♥<rtc><rt>Heart</rt></rtc></ruby>",
       "parent": null,
       "attributes": []
     },
     "rp": {
-      "description":
-        "Semantically meaningless markup for browsers that don't understand ruby annotations.",
-      "keywords": ["ruby", "pronounciation", "annotation", "hint"],
+      "description": "Semantically meaningless markup for browsers that don't understand ruby annotations.",
+      "keywords": [
+        "ruby",
+        "pronounciation",
+        "annotation",
+        "hint"
+      ],
       "example": "<ruby>♥<rp>(</rp><rt>Heart</rt><rp>)</rp></ruby>",
       "parent": null,
       "attributes": []
     },
     "bdo": {
       "description": "Defines directional formatting for content.",
-      "keywords": ["direction", "rtl", "ltr"],
+      "keywords": [
+        "direction",
+        "rtl",
+        "ltr"
+      ],
       "example": "<bdo dir=\"rtl\">Right to left</bdo>",
       "parent": null,
       "attributes": []
     },
     "bdi": {
-      "description":
-        "Text that is separated from directional formatting of its surroundings.",
-      "keywords": ["direction", "rtl", "ltr"],
+      "description": "Text that is separated from directional formatting of its surroundings.",
+      "keywords": [
+        "direction",
+        "rtl",
+        "ltr"
+      ],
       "example": "<p dir=\"ltr\">Include some <bdi>شوكولاتة</bdi></p>",
       "parent": null,
       "attributes": []
@@ -514,28 +713,44 @@
     },
     "u": {
       "description": "Indicates a span of text has a non-textual annotation.",
-      "keywords": ["underline", "annotation"],
+      "keywords": [
+        "underline",
+        "annotation"
+      ],
       "example": "Text with a <u class=\"error\">mistaek</u>.",
       "parent": null,
       "attributes": []
     },
     "ins": {
       "description": "Text that has been inserted during document editing.",
-      "keywords": ["inserted", "editing", "edited"],
+      "keywords": [
+        "inserted",
+        "editing",
+        "edited"
+      ],
       "example": "They <ins>should</ins> not do that.",
       "parent": null,
       "attributes": []
     },
     "del": {
       "description": "Text that has been removed during document editing.",
-      "keywords": ["deleted", "strikethrough", "editing", "edited"],
+      "keywords": [
+        "deleted",
+        "strikethrough",
+        "editing",
+        "edited"
+      ],
       "example": "They <del>should</del> not do that.",
       "parent": null,
       "attributes": []
     },
     "wbr": {
       "description": "Opportunity for a line break.",
-      "keywords": ["word break", "line break", "wrap"],
+      "keywords": [
+        "word break",
+        "line break",
+        "wrap"
+      ],
       "example": "1800-<wbr />123<wbr />456",
       "parent": null,
       "attributes": []
@@ -544,90 +759,127 @@
   "embedding": {
     "img": {
       "description": "An image.",
-      "keywords": ["image", "picture"],
+      "keywords": [
+        "image",
+        "picture"
+      ],
       "example": "<img src=\"boat.png\" alt=\"Sailing boat\" />",
       "parent": null,
       "attributes": []
     },
     "picture": {
-      "description":
-        "An image that can adapt to different display scenarios, e.g. unique mobile and desktop versions of an image.",
-      "keywords": ["image", "picture"],
-      "example": "",
+      "description": "An image that can adapt to different display scenarios, e.g. unique mobile and desktop versions of an image.",
+      "keywords": [
+        "image",
+        "picture"
+      ],
+      "example": "<picture><source srcset=\"...\" /></picture>",
       "parent": null,
       "attributes": []
     },
     "iframe": {
       "description": "Nested browser frame.",
-      "keywords": ["frame", "window"],
+      "keywords": [
+        "frame",
+        "window"
+      ],
       "example": "<iframe src=\"https://...\"></iframe>",
       "parent": null,
       "attributes": []
     },
     "embed": {
-      "description": "Reference to non-HTML content.",
-      "example": "",
+      "description": "Reference to embedded external content.",
+      "example": "<embed type=\"...\" src=\"movie.mov\" />",
       "parent": null,
       "attributes": []
     },
     "object": {
       "description": "External resource such as an image, iframe or plugin.",
-      "example": "",
+      "example": "<object data=\"movie.swf\" type=\"...\"></object>",
       "parent": null,
       "attributes": []
     },
     "param": {
       "description": "Parameters for the parent object.",
-      "example": "",
+      "example": "<param name=\"something\" value=\"...\" />",
       "parent": null,
       "attributes": []
     },
     "video": {
       "description": "Video.",
-      "keywords": ["movie", "film", "media", "player"],
-      "example": "",
+      "keywords": [
+        "movie",
+        "film",
+        "media",
+        "player"
+      ],
+      "example": "<video controls src=\"m.mp4\" poster=\"p.png\" />",
       "parent": null,
       "attributes": []
     },
     "audio": {
       "description": "Audio file.",
-      "keywords": ["sound", "player", "media"],
-      "example": "",
+      "keywords": [
+        "sound",
+        "player",
+        "media"
+      ],
+      "example": "<audio src=\"m.mp3\" autoplay controls />",
       "parent": null,
       "attributes": []
     },
     "source": {
       "description": "Alternative sources for parent video or audio elements.",
-      "keywords": ["audio", "video"],
-      "example": "",
+      "keywords": [
+        "audio",
+        "video"
+      ],
+      "example": "<source src=\"audio.ogg\" type=\"video/ogg\" />",
       "parent": null,
       "attributes": []
     },
     "canvas": {
       "description": "Bitmap which is editable by client side scripts.",
-      "keywords": ["image", "picture", "bitmap"],
-      "example": "",
+      "keywords": [
+        "image",
+        "picture",
+        "bitmap"
+      ],
+      "example": "<canvas id=\"display\"></canvas>",
       "parent": null,
       "attributes": []
     },
     "map": {
       "description": "Image map for adding hyperlinks to parts of an image.",
-      "keywords": ["image", "picture", "link", "map"],
-      "example": "",
+      "keywords": [
+        "image",
+        "picture",
+        "link",
+        "map"
+      ],
+      "example": "<map name=\"hero\"><area .../><area .../></map>",
       "parent": null,
       "attributes": []
     },
     "area": {
       "description": "Hyperlink area in an image map.",
-      "keywords": ["image", "picture", "link", "map"],
-      "example": "",
+      "keywords": [
+        "image",
+        "picture",
+        "link",
+        "map"
+      ],
+      "example": "<area shape=\"circle\" href=\"/home\" coords=\"...\" />",
       "parent": null,
       "attributes": []
     },
     "track": {
       "description": "Specifies external timing track for media elements.",
-      "keywords": ["audio", "video"],
-      "example": "",
+      "keywords": [
+        "audio",
+        "video"
+      ],
+      "example": "<track kind=\"subtitles\" src=\"/captions.vtt\" />",
       "parent": null,
       "attributes": []
     }
@@ -635,70 +887,100 @@
   "table": {
     "table": {
       "description": "Table of multi-dimensional data.",
-      "example": "",
+      "example": "<table><tr><td>Cell</td></tr></table>",
       "parent": null,
       "attributes": []
     },
     "caption": {
       "description": "Title of a table.",
-      "keywords": ["table"],
-      "example": "",
+      "keywords": [
+        "table"
+      ],
+      "example": "<table><caption>Sales</caption>...</table>",
       "parent": null,
       "attributes": []
     },
     "colgroup": {
-      "description": "Defines a group of columns in a table.",
-      "keywords": ["table", "columns"],
-      "example": "",
+      "description": "Defines a group of columns in a table, so common semantics can be applied to all cells.",
+      "keywords": [
+        "table",
+        "columns"
+      ],
+      "example": "<colgroup><col /><col span=\"2\" /></colgroup>",
       "parent": null,
       "attributes": []
     },
     "col": {
       "description": "Columns in a table.",
-      "keywords": ["table", "columns"],
-      "example": "",
+      "keywords": [
+        "table",
+        "columns"
+      ],
+      "example": "<colgroup><col /><col span=\"2\" /></colgroup>",
       "parent": null,
       "attributes": []
     },
     "tbody": {
       "description": "Contains rows that hold the table's data.",
-      "keywords": ["table"],
-      "example": "",
+      "keywords": [
+        "table"
+      ],
+      "example": "<table><tbody>...</tbody></table>",
       "parent": null,
       "attributes": []
     },
     "thead": {
       "description": "Contains rows with table headings.",
-      "keywords": ["table", "header", "headings"],
-      "example": "",
+      "keywords": [
+        "table",
+        "header",
+        "headings"
+      ],
+      "example": "<thead>...</thead><tbody>...</tbody>",
       "parent": null,
       "attributes": []
     },
     "tfoot": {
       "description": "Contains rows with summary of data.",
-      "keywords": ["table", "summary", "footer"],
-      "example": "",
+      "keywords": [
+        "table",
+        "summary",
+        "footer"
+      ],
+      "example": "<thead>...</thead><tbody>...</tbody>",
       "parent": null,
       "attributes": []
     },
     "tr": {
       "description": "A row of cells.",
-      "keywords": ["table", "row", "cell"],
-      "example": "",
+      "keywords": [
+        "table",
+        "row",
+        "cell"
+      ],
+      "example": "<tr><td>One</td><td>Two</td></tr>",
       "parent": null,
       "attributes": []
     },
     "td": {
       "description": "Table cell.",
-      "keywords": ["table", "row", "cell"],
-      "example": "",
+      "keywords": [
+        "table",
+        "row",
+        "cell"
+      ],
+      "example": "<tr><td>One</td><td>Two</td></tr>",
       "parent": null,
       "attributes": []
     },
     "th": {
       "description": "Table heading.",
-      "keywords": ["table", "heading", "cell"],
-      "example": "",
+      "keywords": [
+        "table",
+        "heading",
+        "cell"
+      ],
+      "example": "<tr><th>One</th><th>Two</th></tr>",
       "parent": null,
       "attributes": []
     }
@@ -706,113 +988,161 @@
   "form": {
     "form": {
       "description": "Form.",
-      "keywords": ["input"],
-      "example": "",
+      "keywords": [
+        "input"
+      ],
+      "example": "<form action=\"/submit\" method=\"post\">...</form>",
       "parent": null,
       "attributes": []
     },
     "fieldset": {
       "description": "Set of form controls grouped by theme.",
-      "keywords": ["form", "control", "group"],
-      "example": "",
+      "keywords": [
+        "form",
+        "control",
+        "group"
+      ],
+      "example": "<fieldset><legend>Address</legend>...</fieldset>",
       "parent": null,
       "attributes": []
     },
     "legend": {
       "description": "Define a name for a fieldset.",
-      "keywords": ["form", "name", "group", "fieldset"],
-      "example": "",
+      "keywords": [
+        "form",
+        "name",
+        "group",
+        "fieldset"
+      ],
+      "example": "<fieldset><legend>Name</legend>...</fieldset>",
       "parent": null,
       "attributes": []
     },
     "label": {
       "description": "Caption for a form control.",
-      "keywords": ["form", "caption", "name", "input"],
-      "example": "",
+      "keywords": [
+        "form",
+        "caption",
+        "name",
+        "input"
+      ],
+      "example": "<label for=\"name\">Name</label>",
       "parent": null,
       "attributes": []
     },
     "input": {
       "description": "Generic form input.",
-      "keywords": ["form"],
-      "example": "",
+      "keywords": [
+        "form"
+      ],
+      "example": "<input type=\"text\" id=\"name\" />",
       "parent": null,
       "attributes": []
     },
     "button": {
       "description": "A button.",
-      "example": "",
+      "example": "<button type=\"button\">OK</button>",
       "parent": null,
       "attributes": []
     },
     "select": {
       "description": "Control for selecting from multiple options.",
-      "keywords": ["options", "input", "dropdown"],
-      "example": "",
+      "keywords": [
+        "options",
+        "input",
+        "dropdown"
+      ],
+      "example": "<select name=\"currency\"><option ... /><option ... /></select>",
       "parent": null,
       "attributes": []
     },
     "datalist": {
       "description": "Define sets of options.",
-      "keywords": ["options", "input", "dropdown", "select"],
-      "example": "",
+      "keywords": [
+        "options",
+        "input",
+        "dropdown",
+        "select"
+      ],
+      "example": "<datalist id=\"tech\"><option ... /></datalist>",
       "parent": null,
       "attributes": []
     },
     "optgroup": {
       "description": "Group of option.",
-      "keywords": ["options", "input", "dropdown", "select"],
-      "example": "",
+      "keywords": [
+        "options",
+        "input",
+        "dropdown",
+        "select"
+      ],
+      "example": "<optgroup label=\"Countries\"><option ... /></optgroup>",
       "parent": null,
       "attributes": []
     },
     "option": {
       "description": "Single option within a select control.",
-      "keywords": ["options", "input", "dropdown", "select"],
-      "example": "",
+      "keywords": [
+        "options",
+        "input",
+        "dropdown",
+        "select"
+      ],
+      "example": "<option value=\"AU\">Australia</option>",
       "parent": null,
       "attributes": []
     },
     "textarea": {
       "description": "Multiline free-form text input.",
-      "keywords": ["input", "multiline"],
-      "example": "",
+      "keywords": [
+        "input",
+        "multiline"
+      ],
+      "example": "<textarea name=\"msg\">Content...</textarea>",
       "parent": null,
       "attributes": []
     },
     "output": {
       "description": "Contains the results of a calculation.",
-      "keywords": ["calculation"],
-      "example": "",
+      "keywords": [
+        "calculation"
+      ],
+      "example": "<output name=\"result\">10</output>",
       "parent": null,
       "attributes": []
     },
     "progress": {
       "description": "Control for displaying progress of a task.",
-      "example": "",
+      "example": "<progress value=\"60\" total=\"100\">60%</progress>",
       "parent": null,
       "attributes": []
     },
     "meter": {
       "description": "Control for entering a numeric value in a known range.",
-      "keywords": ["numeric", "number", "range", "input"],
-      "example": "",
+      "keywords": [
+        "numeric",
+        "number",
+        "range",
+        "input"
+      ],
+      "example": "<meter min=\"10\" max=\"20\" value=\"15\">15 points</meter>",
       "parent": null,
       "attributes": []
     }
   },
   "interactive": {
     "details": {
-      "description":
-        "Contains additional information, such as the contents of an accordian view.",
-      "example": "",
+      "description": "Contains additional information, such as the contents of an accordian view.",
+      "example": "<details><p>...</p></details>",
       "parent": null,
       "attributes": []
     },
     "summary": {
       "description": "Provides a caption for a <details> element.",
-      "keywords": ["details"],
-      "example": "",
+      "keywords": [
+        "details"
+      ],
+      "example": "<details><summary>...</summary>...</details>",
       "parent": null,
       "attributes": []
     }
