@@ -9,6 +9,7 @@ import Filter from "../Filter/Filter";
 import { getAllElements } from "../../data";
 import scrollToElement from "./scrollToElement";
 import doesElementMatch from "./doesElementMatch";
+import recordAnalyticsForFilter from "./recordAnalyticsForFilter";
 
 const elements = getAllElements();
 
@@ -20,6 +21,7 @@ class App extends Component {
 
   onFilter(query) {
     this.setState({ query });
+    recordAnalyticsForFilter(query);
   }
 
   onSelect(name) {
@@ -53,7 +55,9 @@ class App extends Component {
         </header>
 
         <main className="App-content">
-          {!visibleElements.length && <div className="App-noMatch">No matches</div>}
+          {!visibleElements.length && (
+            <div className="App-noMatch">No matches</div>
+          )}
 
           <Grid
             elements={visibleElements}
