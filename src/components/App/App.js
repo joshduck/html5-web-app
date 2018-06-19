@@ -2,14 +2,14 @@ import React, { Component } from "react";
 
 import "./App.css";
 
-import Grid from "../Grid/Grid";
-import Info from "../Info/Info";
 import Filter from "../Filter/Filter";
+import Grid from "../Grid/Grid";
+import InfoPanel from "../InfoPanel/InfoPanel";
 
 import { getAllElements } from "../../data";
-import scrollToElement from "./scrollToElement";
-import doesElementMatch from "./doesElementMatch";
-import recordAnalyticsForFilter from "./recordAnalyticsForFilter";
+import scrollToElement from "../../utils/scrollToElement";
+import doesElementMatch from "../../utils/doesElementMatch";
+import recordEventForFilter from "../../utils/recordEventForFilter";
 
 const elements = getAllElements();
 
@@ -21,7 +21,7 @@ class App extends Component {
 
   onFilter(query) {
     this.setState({ query });
-    recordAnalyticsForFilter(query);
+    recordEventForFilter(query);
   }
 
   onSelect(name) {
@@ -66,7 +66,7 @@ class App extends Component {
             className="App-grid"
           />
 
-          <Info element={selectedElement} />
+          <InfoPanel element={selectedElement} />
         </main>
 
         <footer className="App-footer">

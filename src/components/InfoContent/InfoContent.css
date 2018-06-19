@@ -1,0 +1,36 @@
+.InfoContent h1 {
+  margin: 0 0 12px;
+}
+
+.InfoContent-desc {
+  flex: 1;
+  margin: 0 0 12px;
+}
+
+.InfoContent-example {
+  font-family: Consolas, monospace;
+  padding: 0 0 12px;
+  letter-spacing: -0.7px;
+}
+
+.InfoContent-example .token.punctuation {
+  color: var(--grey-1);
+}
+
+.InfoContent-example .token.tag {
+  color: hsl(212, 100%, 70%);
+}
+
+.InfoContent-example .token.attr-name {
+  color: hsl(108, 80%, 50%);
+}
+
+.InfoContent-example .token.attr-value {
+  color: hsl(44, 80%, 50%);
+}
+
+.InfoContent-links {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+}
