@@ -1,22 +1,38 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 import "./App.css";
 
 import Filter from "../Filter/Filter";
 import Grid from "../Grid/Grid";
 import InfoPanel from "../InfoPanel/InfoPanel";
+import NoResults from "../NoResults/NoResults";
+import Shake from "../Shake/Shake";
 
-import { getAllElements } from "../../data";
+import getAllElements from "../../utils/getAllElements";
+import getRandomElement from "../../utils/getRandomElement";
 import scrollToElement from "../../utils/scrollToElement";
 import doesElementMatch from "../../utils/doesElementMatch";
 import recordEventForFilter from "../../utils/recordEventForFilter";
 
-const elements = getAllElements();
-
 class App extends Component {
   constructor() {
     super();
-    this.state = { selected: null, query: null };
+    this.state = {
+      elements: getAllElements(),
+      selected: null,
+      query: null
+    };
+  }
+
+  onRandom() {
+    const name = getRandomElement(this.state.elements);
+    this.setState(
+      {
+        query: null,
+        selected: name
+      },
+      () => scrollToElement(name)
+    );
   }
 
   onFilter(query) {
@@ -31,8 +47,7 @@ class App extends Component {
   }
 
   render() {
-    const { selected } = this.state;
-    const { query } = this.state;
+    const { selected, query, elements } = this.state;
 
     let selectedElement = elements[selected];
     let visibleElements = Object.values(elements);
@@ -49,6 +64,8 @@ class App extends Component {
 
     return (
       <div className="App">
+        <Shake onShake={() => this.onRandom()} />
+
         <header className="App-header">
           <h1 className="App-title">&lt;All The Tags&gt;</h1>
           <Filter onChange={query => this.onFilter(query)} />
@@ -56,7 +73,7 @@ class App extends Component {
 
         <main className="App-content">
           {!visibleElements.length && (
-            <div className="App-noMatch">No matches</div>
+            <NoResults onRandom={() => this.onRandom()} />
           )}
 
           <Grid

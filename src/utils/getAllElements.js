@@ -1,10 +1,7 @@
-import groupedElements from "./elements";
+import groupedElements from "../data/elements";
 
-import w3c from "./links/w3c";
-import mdn from "./links/mdn";
-import htmldoctor from "./links/htmldoctor";
-import htmldog from "./links/htmldog";
-import w3schools from "./links/w3schools";
+import w3c from "../data/links/w3c";
+import mdn from "../data/links/mdn";
 
 const getLink = (list, name) => {
   if (list[name]) {
@@ -14,7 +11,7 @@ const getLink = (list, name) => {
   }
 };
 
-export const getAllElements = () => {
+const getAllElements = () => {
   const all = {};
 
   Object.keys(groupedElements).forEach(groupName => {
@@ -24,10 +21,7 @@ export const getAllElements = () => {
 
       const links = {
         w3c: getLink(w3c, elementName),
-        mdn: getLink(mdn, elementName),
-        htmldoctor: getLink(htmldoctor, elementName),
-        htmldog: getLink(htmldog, elementName),
-        w3schools: getLink(w3schools, elementName)
+        mdn: getLink(mdn, elementName)
       };
 
       if (process.env.NODE_ENV === "development") {
@@ -50,6 +44,7 @@ export const getAllElements = () => {
         description: element.description,
         example: element.example,
         keywords: element.keywords,
+        weight: element.weight || 1,
         links
       };
     });
@@ -60,3 +55,5 @@ export const getAllElements = () => {
 
   return all;
 };
+
+export default getAllElements;

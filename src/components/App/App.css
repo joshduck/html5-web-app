@@ -20,7 +20,6 @@
   font-style: normal;
 }
 
-
 .App-title {
   margin: 0 0 16px;
   font-size: 2.4em;
@@ -31,34 +30,24 @@
   color: var(--grey-4);
 
   --shadow-color: var(--blue-1);
-  text-shadow:
-    -0.8px 0.8px var(--shadow-color),
-    -1px 0px var(--shadow-color),
-    -0.8px -0.8px var(--shadow-color),
-    0px -1px var(--shadow-color), 
-    0.8px -0.8px var(--shadow-color), 
-    
-    0px 2px var(--shadow-color),
-    1px 3px var(--shadow-color), 
-    2px 4px var(--shadow-color),
-    3px 5px var(--shadow-color),
-    4px 5px var(--shadow-color),
-    2px 0px var(--shadow-color), 
-    3px 1px var(--shadow-color),
-    4px 2px var(--shadow-color), 
-    5px 3px var(--shadow-color),
-    6px 4px var(--shadow-color),
-    5px 5px var(--shadow-color);;
+  text-shadow: -0.8px 0.8px var(--shadow-color), -1px 0px var(--shadow-color),
+    -0.8px -0.8px var(--shadow-color), 0px -1px var(--shadow-color),
+    0.8px -0.8px var(--shadow-color), 0px 2px var(--shadow-color),
+    1px 3px var(--shadow-color), 2px 4px var(--shadow-color),
+    3px 5px var(--shadow-color), 4px 5px var(--shadow-color),
+    2px 0px var(--shadow-color), 3px 1px var(--shadow-color),
+    4px 2px var(--shadow-color), 5px 3px var(--shadow-color),
+    6px 4px var(--shadow-color), 5px 5px var(--shadow-color);
 }
 
 @media (min-width: 800px) {
-  .App-title { 
+  .App-title {
     font-size: 3.2em;
   }
 }
 
 @media (min-width: 1000px) {
-  .App-title { 
+  .App-title {
     font-size: 4em;
   }
 }
@@ -67,13 +56,4 @@
 .App-footer a {
   text-decoration: none;
   color: var(--grey-2);
-}
-
-.App-noMatch {
-  color: var(--grey-2);
-  font-weight: bold;
-  font-size: 1.5em;
-  padding: 32px;
-  text-shadow: 
-    1px 1px 1px  rgba(255, 255, 255, 0.753);
 }

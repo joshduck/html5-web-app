@@ -1,0 +1,41 @@
+.NoResults {
+  padding: 32px;
+}
+
+.NoResults-header,
+.NoResults-shakePrompt,
+.NoResults-chooseRandom {
+  color: var(--grey-2);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.753);
+}
+
+.NoResults-header {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.NoResults-shakePrompt {
+  display: none;
+}
+
+.NoResults-chooseRandom {
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.NoResults-chooseRandom:hover {
+  text-decoration: underline;
+}
+
+@media (pointer: none), (pointer: coarse) {
+  .NoResults-shakePrompt {
+    display: block;
+  }
+
+  .NoResults-chooseRandom {
+    display: none;
+  }
+}
