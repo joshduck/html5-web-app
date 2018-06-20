@@ -12,7 +12,7 @@ const InfoContent = ({ element }) => {
   );
 
   return (
-    <div class="InfoContent">
+    <div className="InfoContent">
       <h1>
         {element.name} {element.status && "(non-standard)"}
       </h1>

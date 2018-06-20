@@ -1,6 +1,4 @@
-import React, { Component, Fragment } from "react";
-
-import "./App.css";
+import React, { Component } from "react";
 
 import Filter from "../Filter/Filter";
 import Grid from "../Grid/Grid";
@@ -13,6 +11,8 @@ import getRandomElement from "../../utils/getRandomElement";
 import scrollToElement from "../../utils/scrollToElement";
 import doesElementMatch from "../../utils/doesElementMatch";
 import recordEventForFilter from "../../utils/recordEventForFilter";
+
+import "./App.css";
 
 class App extends Component {
   constructor() {

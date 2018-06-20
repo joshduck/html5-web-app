@@ -1,10 +1,7 @@
-const INFO_PANEL_HEIGHT = 200;
-const EDGE_BUFFER = 12;
+import zenscroll from "zenscroll";
 
-const scrollTo = y =>
-  window.scrollTo(0, y, {
-    behavior: "smooth"
-  });
+const INFO_PANEL_HEIGHT = 200;
+const EDGE_BUFFER = 20;
 
 export default name => {
   const element = document.getElementById(`element-${name}`);
@@ -13,16 +10,9 @@ export default name => {
   }
 
   const rect = element.getBoundingClientRect();
-
-  const screenTop = window.pageYOffset;
   const screenHeight = window.innerHeight - INFO_PANEL_HEIGHT;
-  const screenBottom = window.pageYOffset + screenHeight;
-  const elementTop = screenTop + rect.top;
-  const elementBottom = screenTop + rect.bottom;
 
-  if (elementTop < screenTop) {
-    scrollTo(elementTop - EDGE_BUFFER);
-  } else if (elementBottom > screenBottom) {
-    scrollTo(elementBottom - screenHeight + EDGE_BUFFER);
+  if (rect.bottom < EDGE_BUFFER || rect.top > screenHeight - EDGE_BUFFER) {
+    zenscroll.center(element);
   }
 };

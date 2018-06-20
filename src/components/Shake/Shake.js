@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import Shake from "shake.js";
 
 class ShakeComponent extends Component {

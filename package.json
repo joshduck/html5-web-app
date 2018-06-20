@@ -10,7 +10,8 @@
     "react-dom": "^16.4.0",
     "react-scripts": "1.1.4",
     "react-transition-group": "^2.3.1",
-    "shake.js": "^1.2.2"
+    "shake.js": "^1.2.2",
+    "zenscroll": "^4.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
