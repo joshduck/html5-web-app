@@ -5,26 +5,27 @@ class Filter extends Component {
   constructor() {
     super();
     this.frameRef = React.createRef();
+
     this.state = {
-      value: null,
+      hasInteracted: false,
       resetKey: 0
     };
   }
 
-  static getDerivedStateFromProps(props, state) {
-    // Passing value={null} to an input which has been interacted with
-    // will remove and recreate the iframe. This removes the "shake to undo"
-    // prompt for iOS.
-    if (props.value === null && state.value !== null) {
-      console.log("Should reset frame");
-      return { resetKey: state.resetKey + 1 };
-    } else {
-      return {};
-    }
+  // This will remove and recreate the iframe if it has been interacted with. This:
+  // 1. Resets the input, and
+  // 2. Removes the "shake to undo" prompt for iOS.
+  reset() {
+    this.setState({
+      hasInteracted: false,
+      resetKey: this.state.resetKey + 1
+    });
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    return nextState.resetKey > this.state.resetKey;
+    return (
+      !!this.state.hasInteracted && nextState.resetKey > this.state.resetKey
+    );
   }
 
   onLoadFrame() {
@@ -33,8 +34,8 @@ class Filter extends Component {
   }
 
   onInput(value) {
+    this.setState({ hasInteracted: true });
     this.props.onChange(value);
-    this.setState({ value });
   }
 
   render() {

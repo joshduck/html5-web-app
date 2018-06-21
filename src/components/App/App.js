@@ -17,6 +17,7 @@ import "./App.css";
 class App extends Component {
   constructor() {
     super();
+    this.filterRef = React.createRef();
     this.state = {
       elements: getAllElements(),
       selected: null,
@@ -30,6 +31,7 @@ class App extends Component {
   }
 
   onRandom() {
+    this.filterRef.current.reset();
     const name = getRandomElement(this.state.elements);
     this.setState(
       {
@@ -77,7 +79,11 @@ class App extends Component {
             All The Tags
             <span aria-hidden="true">&gt;</span>
           </h1>
-          <Filter value={query} onChange={value => this.onFilter(value)} />
+          <Filter
+            ref={this.filterRef}
+            value={query}
+            onChange={value => this.onFilter(value)}
+          />
         </header>
 
         <main className="App-content">
