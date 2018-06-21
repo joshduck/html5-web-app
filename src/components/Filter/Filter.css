@@ -1,26 +1,6 @@
-.Filter-input {
-  padding: 8px;
+.Filter-frame {
   width: 100%;
   max-width: 600px;
-  box-sizing: border-box;
-  margin: 0;
-  font-size: 1.2rem;
+  height: 2.5em;
   border: none;
-  border-bottom: 2px solid var(--input-border-color);
-  border-radius: 0;
-  background: transparent;
-  transition: all ease-in 200ms;
-  text-align: center;
-}
-
-.Filter-input:focus,
-.Filter-input:active {
-  outline: none;
-  background: white;
-}
-
-.Filter-input::placeholder {
-  font-style: italic;
-  font-weight: 200;
-  color: var(--input-placholder-color);
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      background: #ebebeb;
+    }
+
+    input {
+      padding: 8px;
+      width: 100vw;
+      height: 100vh;
+      box-sizing: border-box;
+      margin: 0;
+      font-size: 1.2rem;
+      border: none;
+      border-bottom: 2px solid #5bc0de;
+      border-radius: 0;
+      background: transparent;
+      transition: all ease-in 200ms;
+      text-align: center;
+    }
+
+    input:focus,
+    input:active {
+      outline: none;
+      background: white;
+    }
+
+    input::placeholder {
+      font-style: italic;
+      font-weight: 200;
+      color: #8d9dad;
+    }
+  </style>
+</head>
+
+<body>
+  <input id="input" value="" placeholder="Filter (e.g. body, text, js)">
+</body>
+
+</html>

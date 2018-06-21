@@ -77,7 +77,7 @@ class App extends Component {
             All The Tags
             <span aria-hidden="true">&gt;</span>
           </h1>
-          <Filter query={query} onChange={query => this.onFilter(query)} />
+          <Filter value={query} onChange={value => this.onFilter(value)} />
         </header>
 
         <main className="App-content">
