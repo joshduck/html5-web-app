@@ -1,5 +1,6 @@
 import zenscroll from "zenscroll";
 
+const SCROLL_DURATION = 500;
 const INFO_PANEL_HEIGHT = 200;
 const EDGE_BUFFER = 20;
 
@@ -13,6 +14,6 @@ export default name => {
   const screenHeight = window.innerHeight - INFO_PANEL_HEIGHT;
 
   if (rect.bottom < EDGE_BUFFER || rect.top > screenHeight - EDGE_BUFFER) {
-    zenscroll.center(element);
+    zenscroll.center(element, SCROLL_DURATION, INFO_PANEL_HEIGHT / 2);
   }
 };

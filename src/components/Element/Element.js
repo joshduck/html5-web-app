@@ -51,6 +51,7 @@ class Element extends React.Component {
 
   onClick(allowDeselect, event) {
     event.preventDefault();
+    event.stopPropagation();
 
     if (
       this.props.selected &&

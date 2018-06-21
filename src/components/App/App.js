@@ -10,7 +10,7 @@ import getAllElements from "../../utils/getAllElements";
 import getRandomElement from "../../utils/getRandomElement";
 import scrollToElement from "../../utils/scrollToElement";
 import doesElementMatch from "../../utils/doesElementMatch";
-import recordEventForFilter from "../../utils/recordEventForFilter";
+import { reportFilter, reportShake } from "../../utils/analytics";
 
 import "./App.css";
 
@@ -22,6 +22,11 @@ class App extends Component {
       selected: null,
       query: null
     };
+  }
+
+  onShake() {
+    reportShake();
+    this.onRandom();
   }
 
   onRandom() {
@@ -36,8 +41,8 @@ class App extends Component {
   }
 
   onFilter(query) {
+    reportFilter(query);
     this.setState({ query });
-    recordEventForFilter(query);
   }
 
   onSelect(name) {
@@ -63,12 +68,16 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
-        <Shake onShake={() => this.onRandom()} />
+      <div className="App" onClick={() => this.onSelect(null)}>
+        <Shake onShake={() => this.onShake()} />
 
         <header className="App-header">
-          <h1 className="App-title">&lt;All The Tags&gt;</h1>
-          <Filter onChange={query => this.onFilter(query)} />
+          <h1 className="App-title">
+            <span aria-hidden="true">&lt;</span>
+            All The Tags
+            <span aria-hidden="true">&gt;</span>
+          </h1>
+          <Filter query={query} onChange={query => this.onFilter(query)} />
         </header>
 
         <main className="App-content">

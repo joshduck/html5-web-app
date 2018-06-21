@@ -10,6 +10,7 @@ const InfoPanel = ({ element }) => (
       InfoPanel: true,
       "InfoPanel-showing": !!element
     })}
+    onClick={e => e.stopPropagation()}
   >
     <dialog open={!!element} className="InfoPanel-panel">
       {element && <InfoContent element={element} />}
