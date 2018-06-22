@@ -1,6 +1,19 @@
 import React, { Component } from "react";
 import "./Filter.css";
 
+// Create a shim component then focus and unfocus it so that Safari doesn't keep
+// the keyboard open for the iframe that was unceremoniously nuked from the DOM.
+const forceHideKeyboard = () => {
+  const input = document.createElement("textarea");
+  input.className = "Filter-focusShim";
+  document.body.prepend(input);
+  input.focus();
+  setTimeout(() => {
+    input.blur();
+    document.body.removeChild(input);
+  }, 100);
+};
+
 class Filter extends Component {
   constructor() {
     super();
@@ -12,14 +25,18 @@ class Filter extends Component {
     };
   }
 
-  // This will remove and recreate the iframe if it has been interacted with. This:
-  // 1. Resets the input, and
-  // 2. Removes the "shake to undo" prompt for iOS.
+  // This will remove and recreate the iframe if it has been interacted with. This
+  // resets the input, and emoves the "shake to undo" prompt for iOS.
   reset() {
+    forceHideKeyboard();
     this.setState({
       hasInteracted: false,
       resetKey: this.state.resetKey + 1
     });
+  }
+
+  blur() {
+    forceHideKeyboard();
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -29,8 +46,8 @@ class Filter extends Component {
   }
 
   onLoadFrame() {
-    const document = this.frameRef.current.contentWindow;
-    document.addEventListener("input", e => this.onInput(e.target.value));
+    const window = this.frameRef.current.contentWindow;
+    window.addEventListener("input", e => this.onInput(e.target.value));
   }
 
   onInput(value) {
@@ -47,6 +64,7 @@ class Filter extends Component {
         key={this.state.resetKey}
         ref={this.frameRef}
         onLoad={() => this.onLoadFrame()}
+        onClick={() => this.onClick()}
       />
     );
   }

@@ -4,3 +4,12 @@
   height: 2.5em;
   border: none;
 }
+
+.Filter-focusShim {
+  opacity: 0;
+  position: absolute;
+  top: -100px;
+  /* Over 16px will prevent Safari zooming in on focus
+  https://stackoverflow.com/questions/2989263/disable-auto-zoom-in-input-text-tag-safari-on-iphone */
+  font-size: 20px;
+}

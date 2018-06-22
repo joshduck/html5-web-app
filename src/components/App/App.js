@@ -48,6 +48,7 @@ class App extends Component {
   }
 
   onSelect(name) {
+    this.filterRef.current.blur();
     if (this.state.selected !== name) {
       this.setState({ selected: name }, () => scrollToElement(name));
     }
