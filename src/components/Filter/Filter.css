@@ -1,15 +1,44 @@
-.Filter-frame {
+.Filter {
   width: 100%;
   max-width: 600px;
   height: 2.5em;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* iOS version */
+
+.Filter-iframe {
+  width: 100%;
+  height: 100%;
   border: none;
 }
 
-.Filter-focusShim {
-  opacity: 0;
-  position: fixed;
-  top: -100px;
-  /* Over 16px will prevent Safari zooming in on focus
-  https://stackoverflow.com/questions/2989263/disable-auto-zoom-in-input-text-tag-safari-on-iphone */
-  font-size: 20px;
+/* Input version */
+
+.Filter-input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  font-size: 1.2rem;
+  border: none;
+  border-bottom: 2px solid var(--input-border-color);
+  border-radius: 0;
+  background: transparent;
+  transition: all ease-in 200ms;
+  text-align: center;
+}
+
+.Filter-input:focus,
+.Filter-input:active {
+  outline: none;
+  background: white;
+}
+
+.Filter-input::placeholder {
+  font-style: italic;
+  font-weight: 200;
+  color: var(--input-placholder-color);
 }
