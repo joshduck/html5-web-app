@@ -1,5 +1,5 @@
 const getRandomElement = elements => {
-  const values = Object.values(elements);
+  const values = Object.keys(elements).map(key => elements[key]);
 
   // A "count" of all the weights.
   const total = values.reduce((total, element) => total + element.weight, 0);

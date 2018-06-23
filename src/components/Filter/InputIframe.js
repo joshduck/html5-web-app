@@ -19,12 +19,16 @@ class InputIframe extends Component {
     forceHideKeyboard();
     this.setState({
       hasInteracted: false,
+      hasFocused: false,
       resetKey: this.state.resetKey + 1
     });
   }
 
   blur() {
-    forceHideKeyboard();
+    if (this.state.hasFocused) {
+      forceHideKeyboard();
+      this.setState({ hasFocused: false });
+    }
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -36,6 +40,11 @@ class InputIframe extends Component {
   onLoadFrame() {
     const window = this.frameRef.current.contentWindow;
     window.addEventListener("input", e => this.onInput(e.target.value));
+    window.addEventListener("focus", e => this.onFocus(e.target));
+  }
+
+  onFocus() {
+    this.setState({ hasFocused: true });
   }
 
   onInput(value) {
