@@ -21,6 +21,8 @@
   justify-content: flex-start;
 
   transition: bottom ease-in-out 200ms;
+  background: #333;
+  color: white;
   background: var(--panel-background-color);
   color: var(--panel-text-color);
   box-shadow: 0 -4px rgba(0, 0, 0, 0.2);
