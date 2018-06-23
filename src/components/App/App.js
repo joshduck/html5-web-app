@@ -43,7 +43,9 @@ class App extends Component {
   }
 
   onFilter(query) {
-    reportFilter(query);
+    if (query) {
+      reportFilter(query);
+    }
     this.setState({ query });
   }
 
