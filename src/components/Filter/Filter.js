@@ -23,7 +23,11 @@ class Filter extends Component {
   render() {
     return (
       <div className="Filter">
-        <InputComponent ref={this.inputRef} onChange={this.props.onChange} />
+        <InputComponent
+          ref={this.inputRef}
+          onFocus={this.props.onFocus}
+          onChange={this.props.onChange}
+        />
       </div>
     );
   }
