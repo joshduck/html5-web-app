@@ -13,10 +13,10 @@ const forceHideKeyboard = () => {
    */
   input.style.opacity = 0;
   input.style.position = "fixed";
-  input.style.top = "-100px";
+  input.style.top = "100px";
   input.style.fontSize = "20px";
 
-  document.body.prepend(input);
+  document.body.appendChild(input);
   input.focus();
 
   setTimeout(() => {
