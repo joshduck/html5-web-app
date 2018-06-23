@@ -381,6 +381,7 @@
     },
     "dfn": {
       "description": "Term being defined by the parent section.",
+      "example": "<p><dfn id=\"def-html\">HTML</dfn> is a standard for...</p>",
       "keywords": ["definition"],
       "parent": null,
       "attributes": []

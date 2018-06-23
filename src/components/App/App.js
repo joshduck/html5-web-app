@@ -54,6 +54,10 @@ class App extends Component {
     }
   }
 
+  onFocusFilter() {
+    this.setState({ selected: null });
+  }
+
   render() {
     const { selected, query, elements } = this.state;
 
@@ -84,6 +88,7 @@ class App extends Component {
             ref={this.filterRef}
             value={query}
             onChange={value => this.onFilter(value)}
+            onFocus={() => this.onFocusFilter(null)}
           />
         </header>
 
