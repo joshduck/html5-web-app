@@ -62,7 +62,7 @@ class App extends Component {
     const { selected, query, elements } = this.state;
 
     let selectedElement = elements[selected];
-    let visibleElements = Object.values(elements);
+    let visibleElements = Object.keys(elements).map(key => elements[key]);
 
     if (query) {
       visibleElements = visibleElements.filter(element =>
