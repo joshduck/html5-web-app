@@ -72,6 +72,7 @@
     "https://www.w3.org/TR/html5/text-level-semantics.html#the-ruby-element",
   "rt": "https://www.w3.org/TR/html5/text-level-semantics.html#the-rt-element",
   "rp": "https://www.w3.org/TR/html5/text-level-semantics.html#the-rp-element",
+  "rb": "https://www.w3.org/TR/html5/textlevel-semantics.html#the-rb-element",
   "bdo":
     "https://www.w3.org/TR/html5/text-level-semantics.html#the-bdo-element",
   "bdi":

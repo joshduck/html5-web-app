@@ -7,20 +7,20 @@ import effectiveTextLength from "./effectiveTextLength";
 import "./Element.css";
 
 const COLORS = {
-  root: 0,
-  document: 35,
-  sections: 55,
-  grouping: 75,
-  text: 100,
-  embedding: 175,
-  table: 205,
-  form: 280,
-  interactive: 320
+  root: "hsl(0, 90%, 65%)",
+  document: "hsl(35, 90%, 60%)",
+  sections: "hsl(55, 90%, 60%)",
+  grouping: "hsl(75, 90%, 55%)",
+  text: "hsl(105, 90%, 60%)",
+  embedding: "hsl(185, 90%, 60%)",
+  table: "hsl(205, 90%, 65%)",
+  form: "hsl(280, 80%, 70%)",
+  interactive: "hsl(320, 80%, 65%)"
 };
 
 const BASE_SIZE = 32;
 
-const colorFor = element => `hsl(${COLORS[element.group]}, 90%, 60%)`;
+const colorFor = element => COLORS[element.group];
 
 const sizeFor = element => {
   const length = effectiveTextLength(element.name);
